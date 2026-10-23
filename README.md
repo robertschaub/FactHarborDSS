@@ -1,6 +1,6 @@
-# Decider
+# FactHarborDSS
 
-Decider is an application and service being designed for evidence-based decision making. It will support human decisions, fact-checking, and gates controlling agent outputs and proposed external actions.
+FactHarborDSS is an application and service being designed for evidence-based decision making. It will support human decisions, fact-checking, and gates controlling agent outputs and proposed external actions.
 
 ## Product direction
 
