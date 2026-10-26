@@ -30,6 +30,19 @@ Default experiment bound: one hypothesis, at most two substantive revisions and 
 
 Temporary experiment flags need an owner, expiry and removal obligation. Default-off is not removal. Keep findings in the task record rather than abandoned executable paths. Do not delete unrelated work or evidence as cleanup.
 
+## Navigation
+
+Work in bets. A bet is a one-page record with an observable outcome, an appetite in working days, termination criteria (a date and a budget: reaching either stops implementation and closes the bet with what is green), an interim scope trigger, prerequisites listed before the start (an authorized provider task record, a provider or operational approval), the acceptance gate, the affordability limit and what the bet retires. One bet is open at a time; a bet with a missing prerequisite runs only its offline part. The current bet page is supplied with the task.
+
+Specify at two levels. Accepted requirements, architecture boundaries, domain schemas and invariants are the macro-specification and change only by a recorded decision. The active slice is specified as executable acceptance fixtures, written before implementation by someone other than the implementing agent, which never edits its own acceptance assertions. Write no prose specification for a slice before its bet starts.
+
+Measure before iterating. Analytical changes are candidates until a recorded panel wave compares them with the baseline on the frozen golden set, scoring stability and correctness against human reference judgments separately; the panel is a development instrument and does not replace qualification before ordinary use. Keep a one-line task record per delegated task (agent, model version, first-attempt acceptance, reverts, review findings, time to green).
+
+Retire. Each bet names what it retires; superseded text is deleted, not preserved beside its successor; analytical material is pruned only after a panel wave. Reading burden (what an implementer must read before code, what an agent must honour) is counted monthly and may not grow.
+
+Review once per gate with evidence. A blocking finding needs a failing fixture inside the bet's scope or precise source or contract evidence; scenarios outside the stated requirements are rejected; a review of a review happens only when a reviewer error had consequences.
+
+Keep the cockpit small. Five Friday conditions with fixed corrective actions, a three-line time log and a monthly human review, together capped at two hours a week; when the cap is exceeded for two weeks, cut the bookkeeping, not the building.
 ## Testing without repeated permission
 
 Within an authorized development task, scoped reversible edits, synthetic fixture creation and focused offline checks in disposable state need no fresh approval for each step. Protect fixed acceptance and held-out cases from unilateral expectation edits. Do not tune prompts or rules to reproduce held-out answers. A held-out case whose answer key the implementer has seen or tuned against becomes a development case and must be replaced in the held-out evaluation. This is an evaluation principle, not a claim of installed held-out-data controls. Tests should exercise a contract or failure mode rather than restate implementation.
