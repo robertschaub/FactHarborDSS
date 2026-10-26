@@ -17,11 +17,15 @@ FactHarborDSS (DSS: Decision Support System) is a planned successor to both app.
 
 ## Status
 
-Requirements and architecture planning. No application, deployment, qualified security boundary or production capability is implemented in this scaffold. The initial delivery scope includes output-release gating, a gate service and one enforced action integration: controlled HTTP/webhook delivery to a cooperating receiver with idempotency and status lookup. Its detailed contract, endpoint and permitted effects remain to be specified; no real delivery is authorized by this plan.
+Requirements and architecture planning. No application, deployment, qualified security boundary or production capability is implemented in this scaffold. The next proposed implementation is an offline structural skeleton using synthetic local files. The first useful pilot requires bounded retrieval over a real, versioned local collection and both factual-claim assessment and one simple reversible decision workflow. Synthetic success does not establish pilot usefulness or qualify ordinary use.
+
+The broader first-release scope includes output-release gating, a gate service and one enforced action integration: controlled HTTP/webhook delivery to a cooperating receiver with idempotency and status lookup. External actions are later than the pilot. Their detailed contract, endpoint and permitted effects remain to be specified; no real delivery is authorized by this plan.
 
 ## Repository scope
 
 Agents start with [AGENTS.md](AGENTS.md) and the [shared development workflow](docs/agents/Workflow.md). The initial setup uses common guidance; client adapters and skills are added only when demonstrated necessary.
+
+Each authorized task supplies its current bet, applicable contract excerpts, fixtures and evaluation material. These must be sufficient for the contributor's work without access to private planning. Stack selection and explicit implementation authorization remain outstanding.
 
 Start the client in this repository root. If it does not load project instructions automatically, explicitly ask it to read AGENTS.md and follow its workflow pointer before work; do not assume startup loading from the client name. Instructions guide behavior and do not establish a sandbox.
 
