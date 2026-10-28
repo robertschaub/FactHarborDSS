@@ -1,0 +1,70 @@
+site_name: FactHarborDSS
+site_description: Evidence-based claim assessment and decision support — purpose, development and cooperation.
+repo_url: https://github.com/robertschaub/FactHarborDSS
+repo_name: robertschaub/FactHarborDSS
+edit_uri: ""
+docs_dir: docs
+site_dir: site
+use_directory_urls: false
+strict: true
+exclude_docs: |
+  agents/
+theme:
+  name: material
+  language: en
+  font: false
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+plugins:
+  - search
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+extra_css:
+  - assets/stylesheets/extra.css
+extra:
+  generator: false
+nav:
+  - Overview:
+      - Home: index.md
+      - Association and projects: Background.md
+      - FactHarbor application: FactHarbor.md
+      - Our AI Charter and EGA: Charter-and-EGA.md
+      - Image credits: Credits.md
+  - Product:
+      - Purpose and approach: Concept.md
+      - Analysis pipeline and debate: Pipeline.md
+      - Why a fresh implementation: Rationale.md
+  - Development:
+      - Roadmap: Roadmap.md
+      - Planned architecture: Architecture.md
+      - Working on the project: Development.md
+  - Cooperation:
+      - Partnerships and funding: Cooperation.md
+      - Explore and contact: Links.md

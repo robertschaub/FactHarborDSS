@@ -1,34 +1,40 @@
 # FactHarborDSS
 
-FactHarborDSS (DSS: Decision Support System) is a planned successor to both app.FactHarbor.ch and the EvidenceGatedAgents core, supporting evidence-based decision making and fact-checking for both humans and working AI agents.
+FactHarborDSS is a planned Decision Support System for factual-claim assessment and comparison of options against evidence and human-confirmed goals.
 
-## Product direction
+**Status — 28 October 2026:** requirements and architecture work in progress; the first development milestone has not started. The documentation site is buildable. The DSS application is not yet implemented or evaluated.
 
-- Support defining a problem, gathering information, identifying alternatives, weighing evidence, recommending a choice, taking authorized action, and reviewing outcomes.
-- Explain recommendations with traceable evidence, assumptions, trade-offs and limitations.
-- Distinguish confidence in a recommendation from defensible probabilities of specified outcomes.
-- Provide claim assessments with verdicts and confidence.
-- Let humans and authenticated working agents request decision support and fact-checking using shared assessment semantics; keep evidence findings, recommendations and permission to release outputs or execute actions distinct.
-- Support public-only, organization-private-only and combined evidence scopes.
-- Adapt analysis effort and agent orchestration to complexity and the severity of potential consequences, within explicit limits.
-- Support iterative analysis and targeted requests for additional input, including authenticated human participation where required.
-- Keep customer workspaces and their data private by default.
-- Require demonstrated benefit before adopting proposed behavioral improvements.
+## Read the documentation
 
-## Status
+- [Start here](docs/index.md)
+- [Association and projects](docs/Background.md)
+- [FactHarbor application (Alpha) in practice](docs/FactHarbor.md)
+- [Our AI Charter and EGA](docs/Charter-and-EGA.md)
+- [Purpose and approach](docs/Concept.md)
+- [Analysis pipeline and agent debate](docs/Pipeline.md)
+- [Why a fresh implementation](docs/Rationale.md)
+- [Roadmap](docs/Roadmap.md) and [planned architecture](docs/Architecture.md)
+- [Partnerships and funded development](docs/Cooperation.md)
+- [Development guide](docs/Development.md) and [contact routes](docs/Links.md)
 
-Requirements and architecture planning. No application, deployment, qualified security boundary or production capability is implemented in this scaffold. The next proposed implementation is an offline structural skeleton using synthetic local files. The first useful pilot requires bounded retrieval over a real, versioned local collection and both factual-claim assessment and one simple reversible decision workflow. Synthetic success does not establish pilot usefulness or qualify ordinary use.
+The MkDocs site organizes these pages into Overview, Product, Development and Cooperation. It preserves the distinction between the existing Alpha, the Charter/EGA concepts and planned DSS capabilities.
 
-The broader first-release scope includes output-release gating, a gate service and one enforced action integration: controlled HTTP/webhook delivery to a cooperating receiver with idempotency and status lookup. External actions are later than the pilot. Their detailed contract, endpoint and permitted effects remain to be specified; no real delivery is authorized by this plan.
+Detailed requirements, specifications and architecture documents currently live in the related private repository; see [Planning documents](docs/Architecture.md#planning-documents).
 
-## Repository scope
+## Preview locally
 
-Agents start with [AGENTS.md](AGENTS.md) and the [shared development workflow](docs/agents/Workflow.md). The initial setup uses common guidance; client adapters and skills are added only when demonstrated necessary.
+With Python 3.12:
 
-Each authorized task supplies its current bet, applicable contract excerpts, fixtures and evaluation material. These must be sufficient for the contributor's work without access to private planning. Stack selection and explicit implementation authorization remain outstanding.
+```powershell
+python -m venv .venv
+.venv\Scripts\python -m pip install -r requirements-docs.txt
+.venv\Scripts\python -m mkdocs serve --dev-addr 127.0.0.1:8000
+```
 
-Start the client in this repository root. If it does not load project instructions automatically, explicitly ask it to read AGENTS.md and follow its workflow pointer before work; do not assume startup loading from the client name. Instructions guide behavior and do not establish a sandbox.
+Open the local address printed by MkDocs. Use `.venv\Scripts\python -m mkdocs build --strict` for a checked static build. See the [development guide](docs/Development.md#build-and-preview-the-documentation) for details and the macOS/Linux command path.
 
-This repository will contain self-contained application/service code, executable schemas, prompts, safe configuration defaults, contributor-facing requirements and specifications, and synthetic tests. Build and contribution workflows must not depend on unavailable external planning documents.
+## Repository work
 
-Do not commit customer inputs, private evidence, reports, credentials or raw execution logs. Public release and licensing are separate pending decisions.
+[CONTRIBUTING.md](CONTRIBUTING.md) routes to the cooperation and development pages. Agents start with [AGENTS.md](AGENTS.md) and the [agent workflow](docs/agents/Workflow.md). Contributions and future builds must remain self-contained without private planning material.
+
+Implementation, live evidence acquisition, provider spending and deployment require an explicitly agreed task. This repository and its documentation are public; repository-wide licensing remains pending. No GitHub Pages deployment is enabled by the local documentation setup.
