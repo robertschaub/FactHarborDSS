@@ -21,8 +21,6 @@ FactHarborDSS is a planned Decision Support System for factual-claim assessment 
 
 The MkDocs site organizes these pages into Overview, Product and Cooperation. It preserves the distinction between the existing Alpha, the Charter/EGA concepts and planned DSS capabilities.
 
-Detailed requirements, specifications and architecture documents currently live in the related private repository; see [Planning documents](docs/Architecture.md#planning-documents).
-
 ## Preview locally
 
 With Python 3.12:

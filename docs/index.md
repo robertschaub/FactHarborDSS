@@ -25,6 +25,4 @@ It is developed within the [FactHarbor association](Background.md), a Swiss non-
 
 **Planning stage — 28 October 2026.** The first development phase would check public-web claims and preserve the evidence examined. Implementation has not started; DSS benefits have yet to be demonstrated.
 
-Detailed requirements, specifications and architecture documents currently live in the [related private repository](Architecture.md#planning-documents).
-
 Explore the [planned architecture](Architecture.md), [why a fresh implementation](Rationale.md), or [partnership and funding opportunities](Cooperation.md).

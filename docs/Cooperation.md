@@ -34,7 +34,7 @@ Provide capacity for a bounded phase with explicit objectives, deliverables and 
 
 The FactHarbor application (Alpha) offers an existing report experience to learn from. DSS has planning drafts, architecture, worked examples and authored acceptance scenarios. The FactHarbor association provides the non-profit setting. These foundations require review and refinement; they are not a finished implementation specification or qualified product.
 
-Detailed DSS planning documents currently live in the [related private repository](Architecture.md#planning-documents); these pages summarize their direction. Any agreed contribution needs the relevant self-contained scope and acceptance conditions before dependent work.
+The [project concept](Concept.md) and [planned architecture](Architecture.md) are documented in this repository. Any agreed contribution needs the relevant self-contained scope and acceptance conditions before dependent work.
 
 ### Contribution sought
 

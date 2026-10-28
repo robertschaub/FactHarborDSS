@@ -18,7 +18,7 @@ These are different projects and maturity levels, not interchangeable names for 
 
 The Alpha's reports are concrete examples of an existing application. Charter documents describe principles and proposed structures. The Runtime proof of concept does not establish completed EGA integration, operational certification or DSS security.
 
-Detailed DSS planning documents currently live in the [related private repository](Architecture.md#planning-documents); this documentation summarizes their direction.
+The [project concept](Concept.md) and [planned architecture](Architecture.md) in this repository describe the DSS direction.
 
 ## Continuity without assumed parity
 
