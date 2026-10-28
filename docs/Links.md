@@ -16,6 +16,7 @@ These destinations describe their own projects and maturity. Their results do no
 - [Our AI Charter](https://github.com/robertschaub/our-ai-charter)
 - [AI Charter Runtime](https://github.com/robertschaub/ai-charter-runtime) — unfinished proof of concept.
 - [FactHarborDSS](https://github.com/robertschaub/FactHarborDSS) — public documentation and planned application home.
+- [Contribution guide](https://github.com/robertschaub/FactHarborDSS/blob/main/CONTRIBUTING.md) and [public proposals and issues](https://github.com/robertschaub/FactHarborDSS/issues).
 
 ## Start a conversation
 

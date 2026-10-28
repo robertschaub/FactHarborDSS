@@ -14,7 +14,7 @@ These are different projects and maturity levels, not interchangeable names for 
 | **Our AI Charter** | Public framework, commitments, research and articles in draft form; a proposed network. | Accountability, openness, traceability and the public-interest context. |
 | **Evidence-Gated Agents** | A defined concept and prototype direction; DSS integration remains development work. | Examine a proposed step's evidence and authority before permitted release or action. |
 | **AI Charter Runtime** | A separate runnable but unfinished proof of concept, exercised with simulated scenarios and local effects. | Lessons about controls outside the acting AI. Code reuse remains an explicit choice. |
-| **FactHarborDSS** | Requirements, architecture, worked examples and authored acceptance scenarios under review. | A shared core for human and agent claim assessment and decision support. Not yet implemented or evaluated. |
+| **FactHarborDSS** | Published concept, pipeline and architecture overviews; planning continues. | A shared core for human and agent claim assessment and decision support. Not yet implemented or evaluated. |
 
 The Alpha's reports are concrete examples of an existing application. Charter documents describe principles and proposed structures. The Runtime proof of concept does not establish completed EGA integration, operational certification or DSS security.
 

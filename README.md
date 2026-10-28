@@ -39,4 +39,4 @@ Open the local address printed by MkDocs. Use `.venv\Scripts\python -m mkdocs bu
 
 Implementation, live evidence acquisition, provider spending and application deployment require an explicitly agreed task. This repository and its documentation are public; repository-wide licensing remains pending.
 
-The MkDocs site is published through GitHub Pages. Documentation changes pushed to `main` are built and published automatically by the [documentation workflow](.github/workflows/deploy-docs.yml).
+Pull requests to `main` run a strict documentation build without deploying. The MkDocs site is published through GitHub Pages. Documentation changes pushed to `main` are built and published automatically by the [documentation workflow](.github/workflows/deploy-docs.yml).

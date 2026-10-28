@@ -1,7 +1,14 @@
-name: Deploy Docs to GitHub Pages
+name: Check and Deploy Documentation
 
 on:
   push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'mkdocs.yml'
+      - 'requirements-docs.txt'
+      - '.github/workflows/deploy-docs.yml'
+  pull_request:
     branches: [main]
     paths:
       - 'docs/**'
@@ -14,11 +21,27 @@ permissions:
   contents: read
 
 concurrency:
-  group: docs-pages
+  group: docs-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Install documentation dependencies
+        run: python -m pip install -r requirements-docs.txt
+      - name: Check documentation
+        run: python -m mkdocs build --strict
+
   deploy:
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     permissions:
       contents: write

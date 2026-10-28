@@ -13,6 +13,7 @@
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #493840;
   --md-accent-fg-color: #e8af8f;
+  --md-accent-bg-color: #2b2125;
   --md-typeset-a-color: #e8af8f;
 }
 .md-typeset { line-height: 1.7; }

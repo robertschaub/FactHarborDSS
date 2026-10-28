@@ -32,6 +32,8 @@ Temporary experiment flags need an owner, expiry and removal obligation. Default
 
 ## Navigation
 
+This section applies to implementation and analytical development. Ordinary documentation and investigation tasks use their task or issue and the relevant checks above; they need no bet, acceptance fixtures or evaluation panel. Changes to analytical policy still follow the behavioral-experiment rules.
+
 Work in bets. A bet is a one-page record with an observable outcome, an appetite in working days, termination criteria (a date and a budget: reaching either stops implementation and closes the bet with what is green), an interim scope trigger, prerequisites listed before the start (an authorized provider task record, a provider or operational approval), the acceptance gate, the affordability limit and what the bet retires. One bet is open at a time; a bet with a missing prerequisite runs only the parts that are independently authorized and whose own prerequisites are met. The current bet page is supplied with the task.
 
 Specify at two levels. Accepted requirements, architecture boundaries, domain schemas and invariants are the macro-specification and change only by a recorded decision. The active slice is specified as executable acceptance fixtures, written before implementation by someone other than the implementing agent, which never edits its own acceptance assertions. Write no prose specification for a slice before its bet starts.
@@ -43,6 +45,7 @@ Retire. Each bet names what it retires; superseded text is deleted, not preserve
 Review once per gate with evidence. A blocking finding needs a failing fixture inside the bet's scope or precise source or contract evidence; scenarios outside the stated requirements are rejected; a review of a review happens only when a reviewer error had consequences.
 
 Close out in one line: termination status, what was retired, and the task-record line for each delegated task. The maintainer's weekly scoreboard, time log and human review are not contributor obligations; when one applies to a task, it is supplied with the task.
+
 ## Testing without repeated permission
 
 Within an authorized development task, scoped reversible edits, synthetic fixture creation and focused offline checks in disposable state need no fresh approval for each step. Protect fixed acceptance and held-out cases from unilateral expectation edits. Do not tune prompts or rules to reproduce held-out answers. A held-out case whose answer key the implementer has seen or tuned against becomes a development case and must be replaced in the held-out evaluation. This is an evaluation principle, not a claim of installed held-out-data controls. Tests should exercise a contract or failure mode rather than restate implementation.

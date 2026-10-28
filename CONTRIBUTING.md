@@ -12,4 +12,4 @@ Keep customer inputs, private evidence and reports, credentials, private paths, 
 
 Keep changes focused, distinguish planned capabilities from demonstrated results, and report checks actually run. Contributions must not depend on private planning documents. Use the [README's build instructions](README.md#preview-locally), check relative links and run `git diff --check`.
 
-The [workflow](docs/agents/Workflow.md) owns detailed review and evaluation rules. Agents also read [AGENTS.md](AGENTS.md).
+For editorial documentation changes, the checks above are sufficient; no development bet or evaluation panel is needed. Substantive requirements and architecture changes still need independent review. The [workflow](docs/agents/Workflow.md) covers development, analytical changes and authorized delegation. Agents also read [AGENTS.md](AGENTS.md).
