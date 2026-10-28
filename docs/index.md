@@ -27,4 +27,4 @@ It is developed within the [FactHarbor association](Background.md), a Swiss non-
 
 Detailed requirements, specifications and architecture documents currently live in the [related private repository](Architecture.md#planning-documents).
 
-Explore the [roadmap](Roadmap.md), [why a fresh implementation](Rationale.md), or [partnership and funding opportunities](Cooperation.md).
+Explore the [planned architecture](Architecture.md), [why a fresh implementation](Rationale.md), or [partnership and funding opportunities](Cooperation.md).

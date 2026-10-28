@@ -44,7 +44,7 @@ Funding and engineering capacity for development and evaluation, ideally combine
 
 A bounded agreement could cover reviewed foundations and resolved scope choices, the implemented milestone, focused verification results, a reader evaluation and a report on quality, usefulness, time, cost and limits. Comparative claim evaluation and the later decision pilot require their own defined scope and resources.
 
-Set scope, duration, budget, responsibilities and review arrangements together. There is no established DSS funding target, committed partner, delivery date or guaranteed product outcome. A successful development check does not automatically qualify results for operational use.
+Set scope, duration, budget, responsibilities and review arrangements together. There is no DSS donation programme, established funding target, committed partner, delivery date or guaranteed product outcome. A successful development check does not automatically qualify results for operational use.
 
 ## Business development and communication
 
@@ -56,4 +56,4 @@ Describe the need or contribution, who would use the result, what evidence would
 
 For a conversation, use [the public contact routes](Links.md#start-a-conversation). For a public technical proposal, use a [repository issue](https://github.com/robertschaub/FactHarborDSS/issues) when you have access. Do not include private evidence or protected evaluation material in the initial message.
 
-Cooperation and sponsorship do not themselves grant publication, deployment, processing or operational-reliance permission. Repository-wide licensing, website hosting and any future application release remain separate decisions. For scoped repository work, see [Working on the project](Development.md).
+Cooperation and sponsorship do not themselves grant publication, deployment, processing or operational-reliance permission. Repository-wide licensing, website hosting and any future application release remain separate decisions. For scoped repository work, see the [contribution guide](https://github.com/robertschaub/FactHarborDSS/blob/main/CONTRIBUTING.md).

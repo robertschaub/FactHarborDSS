@@ -11,7 +11,9 @@ FactHarborDSS is intended to turn a question into a conclusion whose evidence an
 
 [![Planned approach: define a question, examine permitted evidence, assess and selectively challenge the reasoning, then provide a report with sources, reasons and uncertainty](assets/product-overview.svg)](assets/product-overview.svg)
 
-*Broader planned approach, not delivered functionality. Additional-agent debate and decision comparison are later scope. [Full pipeline and agent roles](Pipeline.md) · [Diagram credits](Credits.md#analysis-pipeline).*
+*Broader planned approach, not delivered functionality. Additional-agent debate and decision comparison are later scope. [Full pipeline and agent roles](Pipeline.md).*
+
+*Simplified adaptation of the FactHarbor/DSS design. Attribution: FactHarbor contributors · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · [Public visual lineage](https://robertschaub.github.io/FactHarbor/diagrams/homepage-method.svg).*
 
 ## What the reader should gain
 
@@ -25,4 +27,4 @@ For decisions, people set the priorities. A recommendation does not itself autho
 
 The first phase focuses on public-web claims and saved evidence that can be reassessed. Comparative evaluation would follow; file-based decision support comes later. DSS must demonstrate benefit against existing tools and workflows.
 
-See the [roadmap](Roadmap.md), [planned architecture](Architecture.md), or [ways to cooperate](Cooperation.md).
+See the [planned architecture](Architecture.md) or [ways to cooperate](Cooperation.md).

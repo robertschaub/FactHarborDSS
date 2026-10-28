@@ -26,7 +26,7 @@ Repeatable inputs support investigation; they do not guarantee identical model o
 
 Fact-checking asks what the evidence supports. Decision support adds human-confirmed goals, alternatives and constraints. EGA also asks whether a proposed step is supported and permitted to proceed.
 
-These uses can share evidence and reporting while keeping their methods and authority boundaries distinct. The [concept](Concept.md) explains those distinctions; the [roadmap](Roadmap.md) keeps the broader capabilities separate from the first milestone.
+These uses can share evidence and reporting while keeping their methods and authority boundaries distinct. See the [concept](Concept.md) for their purpose and the [architecture](Architecture.md) for the selected foundations.
 
 ## Production readiness
 
@@ -38,7 +38,7 @@ This is a design direction, not production readiness already achieved. Capacity,
 
 Clear requirements, smaller modules, explicit interfaces and focused tests should make delegated changes easier to review and integrate. An accountable integrator, independent review where required and evidence-based acceptance remain necessary.
 
-A better structure may help both human contributors and coding agents. It does not prove faster development, reliable autonomous operation or installed technical enforcement. The [development guide](Development.md) explains the current working approach.
+A better structure may help both human contributors and coding agents. It does not prove faster development, reliable autonomous operation or installed technical enforcement. The [contribution guide](https://github.com/robertschaub/FactHarborDSS/blob/main/CONTRIBUTING.md) explains how to propose scoped work.
 
 ## Start small and test the reasons
 

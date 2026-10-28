@@ -6,7 +6,9 @@ The planned pipeline connects an exact question to permitted evidence, an assess
 
 [![Simplified planned pipeline: frame the request, capture or replay evidence, assess a claim or decision, select bounded debate tasks, reconcile objections, validate, finalize and check recipient release; a direct route retains mandatory checks](assets/analysis-pipeline.svg)](assets/analysis-pipeline.svg)
 
-*Open the diagram for a larger view. The pink panel contains possible debate tasks; it does not prescribe all roles, parallel dispatch or a fixed number of model calls. The Validator role is represented in step 4 alongside trusted code checks; required validation applies on both routes. [Attribution and reuse notice](Credits.md#analysis-pipeline).*
+*Open the diagram for a larger view. The pink panel contains possible debate tasks; it does not prescribe all roles, parallel dispatch or a fixed number of model calls. The Validator role is represented in step 4 alongside trusted code checks; required validation applies on both routes.*
+
+*Simplified adaptation of the FactHarbor/DSS design. Attribution: FactHarbor contributors · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · [Public visual lineage](https://robertschaub.github.io/FactHarbor/diagrams/homepage-method.svg).*
 
 ## What the agents would contribute
 
@@ -36,4 +38,4 @@ Reports retain material objections, dispositions, changes, reasons, uncertainty 
 
 A report is evidence, not permission to act. External actions have a separate authorization and execution path and are outside this simplified diagram.
 
-See the [system architecture](Architecture.md), [purpose and approach](Concept.md), and [delivery roadmap](Roadmap.md).
+See the [system architecture](Architecture.md) and [purpose and approach](Concept.md).

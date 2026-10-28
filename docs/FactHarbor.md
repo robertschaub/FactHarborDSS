@@ -26,6 +26,8 @@ The next view separates parts of the broader claim and groups evidence within as
 
 *From the same presentation example. Colours summarize the report's assessments; counts are evidence items, not votes or measurements of evidence quality.*
 
+*Both screenshots are reproduced unchanged from the project presentation of 26 October 2026. Attribution: FactHarbor and its contributors.*
+
 The inspection questions matter more than a colour or count: Does a source actually support the stated point? Does it apply to this case? Is the evidence independent? What contradicts the conclusion, and what is missing?
 
 [Open the selected Alpha report](https://app.factharbor.ch/jobs/812e3d1c1c5d423ba27b4bb18dee2ff9). Availability and access depend on the application; the dated images above remain illustrations of the interface shown in the presentation.
@@ -34,4 +36,4 @@ The inspection questions matter more than a colour or count: Does a source actua
 
 DSS would retain inspectable claims, evidence, sources, limitations and separate certainty concepts. It would add a more explicit basis for preserving and replaying the evidence used in an assessment, and later compare options against human-confirmed goals and constraints.
 
-These are design intentions. A new implementation must demonstrate quality and usefulness rather than inherit them from an Alpha screenshot. See the [purpose and approach](Concept.md), [roadmap](Roadmap.md) and [image credits](Credits.md).
+These are design intentions. A new implementation must demonstrate quality and usefulness rather than inherit them from an Alpha screenshot. See the [purpose and approach](Concept.md) and [planned architecture](Architecture.md).
