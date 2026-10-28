@@ -6,7 +6,7 @@ FactHarborDSS is a planned Decision Support System for factual-claim assessment 
 
 **Status — 28 October 2026:** requirements and architecture work in progress; the first development milestone has not started. The DSS application is not yet implemented or evaluated.
 
-## Read the documentation
+## Documentation source files
 
 - [Start here](docs/index.md)
 - [Association and projects](docs/Background.md)
