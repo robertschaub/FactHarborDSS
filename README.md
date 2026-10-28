@@ -1,8 +1,10 @@
 # FactHarborDSS
 
+**[Read the documentation](https://robertschaub.github.io/FactHarborDSS/)**
+
 FactHarborDSS is a planned Decision Support System for factual-claim assessment and comparison of options against evidence and human-confirmed goals.
 
-**Status — 28 October 2026:** requirements and architecture work in progress; the first development milestone has not started. The documentation site is buildable. The DSS application is not yet implemented or evaluated.
+**Status — 28 October 2026:** requirements and architecture work in progress; the first development milestone has not started. The DSS application is not yet implemented or evaluated.
 
 ## Read the documentation
 
@@ -37,4 +39,6 @@ Open the local address printed by MkDocs. Use `.venv\Scripts\python -m mkdocs bu
 
 [CONTRIBUTING.md](CONTRIBUTING.md) explains how to propose and check changes. Agents start with [AGENTS.md](AGENTS.md) and the [agent workflow](docs/agents/Workflow.md). Contributions and future builds must remain self-contained without private planning material.
 
-Implementation, live evidence acquisition, provider spending and deployment require an explicitly agreed task. This repository and its documentation are public; repository-wide licensing remains pending. No GitHub Pages deployment is enabled by the local documentation setup.
+Implementation, live evidence acquisition, provider spending and application deployment require an explicitly agreed task. This repository and its documentation are public; repository-wide licensing remains pending.
+
+The MkDocs site is published through GitHub Pages. Documentation changes pushed to `main` are built and published automatically by the [documentation workflow](.github/workflows/deploy-docs.yml).
