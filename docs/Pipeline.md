@@ -20,7 +20,7 @@ The controller selects only required or justified tasks, their dependencies and 
 | Challenger / specialist | Examine counterevidence, alternative explanations, citation or scope defects, or a specific expert question. |
 | Self-consistency | Examine instability or contradictions on comparable inputs. Repetition and agreement add no independent evidence. |
 | Reconciler | Accept, reject or retain each material objection as unresolved, with reasons; revise affected findings where justified. |
-| Validator | Apply the required qualified semantic checks. Trusted code separately checks references, versions, arithmetic and current authority. Validation grants no release or action permission. |
+| Validator | Apply the required qualified semantic checks, including whether citations support the claim. Trusted code separately checks reference existence, exact quotations, evidence dates, versions, arithmetic and current authority. It applies no source weights or evidence-count formulas. Validation grants no release or action permission. |
 
 These are task roles, not necessarily five permanent agents or five different models. Different role names do not establish independence. The controller joins only the dependencies it admitted, rejects stale or incompatible results, and retains an explicit outcome for failed or cancelled tasks.
 
@@ -31,6 +31,16 @@ Baseline assessment already examines counterevidence. When no extra agent is nee
 Reconciliation follows the substance of an objection, not the number of agents supporting it. A demonstrated reasoning or quotation defect can justify correction without a new source; unsupported disagreement does not automatically reduce a score. Material unresolved issues constrain the conclusion and its intended use.
 
 The controller can admit useful refinement or request human input within the same remaining resource allowance, or record a limited result, hold or stop. Further rounds do not reset limits. Deliberate scope narrowing or changed decision priorities require the applicable human adoption; a claim-only request needs no irrelevant preference approval.
+
+## Judgment reliability
+
+In the planned design, assessments rely on guided model judgment rather than hand-set weights. Reliability comes from recording, separating and measuring judgments:
+
+- **Recorded basis:** each assessment records the interpretation of the question or claim, the key details considered, the evidence capture dates, and the versions of the assessment schema and scale.
+- **Separate states:** conflicting evidence, insufficient evidence and no assessment are distinct outcomes.
+- **Repeated runs:** when runs are repeated on the same captured evidence, their disagreement is never voted into a verdict. The report shows how the runs were distributed and flags instability.
+- **Separate measures:** evidence sufficiency and run stability are reported separately and never merged into one score. A model's self-reported confidence is never used alone.
+- **Source information, not source weights:** source type, ownership, independence and track record inform the assessment and are shown to readers. They are never applied as a weight or gate. Publisher ratings recalled by a model are not used.
 
 ## From candidate to permitted report
 
