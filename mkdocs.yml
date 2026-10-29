@@ -55,7 +55,7 @@ nav:
   - Overview:
       - Home: index.md
       - Association and projects: Background.md
-      - FactHarbor application: FactHarbor.md
+      - From FactHarbor to DSS: FactHarbor.md
       - Our AI Charter and EGA: Charter-and-EGA.md
   - Product:
       - Purpose and approach: Concept.md

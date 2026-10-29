@@ -26,4 +26,4 @@ DSS is intended to succeed the FactHarbor application and the relevant EGA core.
 
 Useful experience, report ideas and carefully selected work should carry forward. Implementation reuse needs case-by-case review. The initial DSS milestone acquires new web evidence; it does not depend on importing the Alpha's evidence or results.
 
-Read [FactHarbor application in practice](FactHarbor.md), [Our AI Charter and EGA](Charter-and-EGA.md), and [why a fresh implementation is proposed](Rationale.md).
+Read [what DSS would carry forward](FactHarbor.md), [Our AI Charter and EGA](Charter-and-EGA.md), and [why a fresh implementation is proposed](Rationale.md).

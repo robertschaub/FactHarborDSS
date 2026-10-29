@@ -10,7 +10,7 @@ FactHarborDSS is a planned Decision Support System for factual-claim assessment 
 
 - [Start here](docs/index.md)
 - [Association and projects](docs/Background.md)
-- [FactHarbor application (Alpha) in practice](docs/FactHarbor.md)
+- [From FactHarbor to DSS](docs/FactHarbor.md)
 - [Our AI Charter and EGA](docs/Charter-and-EGA.md)
 - [Purpose and approach](docs/Concept.md)
 - [Analysis pipeline and agent debate](docs/Pipeline.md)
