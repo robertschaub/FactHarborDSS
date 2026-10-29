@@ -17,7 +17,7 @@ Designed for people and, later, working AI agents.
 
 ## Building on existing work
 
-The project builds on lessons from the [FactHarbor application (Alpha)](https://robertschaub.github.io/FactHarbor/#read-a-report) and [Evidence-Gated Agents](Charter-and-EGA.md): examine what supports a conclusion, and keep permission to share or act separate.
+The project builds on lessons from the FactHarbor application (Alpha)—see its [report walkthrough](https://robertschaub.github.io/FactHarbor/#read-a-report)—and [Evidence-Gated Agents](Charter-and-EGA.md): examine what supports a conclusion, and keep permission to share or act separate.
 
 It is developed within the [FactHarbor association](Background.md), a Swiss non-profit.
 

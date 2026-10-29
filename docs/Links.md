@@ -2,7 +2,7 @@
 
 ## Projects and articles
 
-- [FactHarbor application website](https://factharbor.ch/) — purpose, methodology and background.
+- [FactHarbor website](https://factharbor.ch/) — purpose, methodology and background.
 - [FactHarbor report walkthrough](https://robertschaub.github.io/FactHarbor/#read-a-report) — documentation with example reports and guidance for readers.
 - [FactHarbor application (Alpha)](https://app.factharbor.ch/jobs) — existing claim-checking reports; access may require an invitation.
 - [Our AI Charter](https://robertschaub.github.io/our-ai-charter/) — the public framework and five connected pillars.
