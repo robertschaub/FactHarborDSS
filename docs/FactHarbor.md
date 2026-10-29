@@ -4,7 +4,7 @@
 <a id="read-the-result"></a>
 <a id="inspect-the-evidence"></a>
 
-The existing **FactHarbor application (Alpha)** provides experience to build on. [Explore the application and its report walkthrough](https://robertschaub.github.io/FactHarbor/#read-a-report), including sources, evidence and separate assessment and confidence labels.
+The existing **FactHarbor application (Alpha)** provides experience to build on. [See the FactHarbor report walkthrough](https://robertschaub.github.io/FactHarbor/#read-a-report), including sources, evidence and separate assessment and confidence labels.
 
 ## What DSS would carry forward
 
