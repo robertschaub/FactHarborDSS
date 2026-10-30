@@ -38,8 +38,8 @@ In the planned design, assessments rely on guided model judgment rather than han
 
 - **Recorded basis:** each assessment records the interpretation of the question or claim, the key details considered, the evidence capture dates, and the versions of the assessment schema and scale.
 - **Separate states:** conflicting evidence, insufficient evidence and no assessment are distinct outcomes.
-- **Repeated runs:** if runs are repeated on the same captured evidence, their disagreement is never voted or averaged into a verdict. A single run means stability was not measured. Whether and how observed variation is shown is decided after reader testing.
-- **Separate measures:** evidence sufficiency and any observed run variation stay separate and are never merged into one score. A model's self-reported confidence is never used alone.
+- **Repeated runs:** if runs are repeated on the same captured evidence, the verdict is never set by picking a favorable run, rerunning until runs agree, or voting or averaging. A single run means stability is not measured. Whether and how run variation is shown is decided after reader testing.
+- **Separate measures:** evidence sufficiency and any observed run variation stay separate and are never merged into one score. Run variation is also kept apart from the verdict and its confidence. A model's self-reported confidence is never used alone.
 - **Source information, not source weights:** source type, ownership, independence and track record inform the assessment and are shown to readers. They are never applied as a weight or gate. Publisher ratings recalled by a model are not used.
 
 ## From candidate to permitted report
