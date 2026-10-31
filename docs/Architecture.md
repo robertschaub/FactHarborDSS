@@ -4,7 +4,7 @@ FactHarborDSS is in planning. The diagram shows the selected design, not an impl
 
 [![Planned architecture: TypeScript browser, modular .NET application and worker, PostgreSQL evidence store, separate Source Reliability service, and checked external calls](assets/system-architecture.svg)](assets/system-architecture.svg)
 
-*Open the diagram for a larger view. Components show responsibilities, not security isolation. Original diagram; repository-wide licensing remains undecided.*
+*Open the diagram for a larger view. Components show responsibilities, not security isolation. Technical users would call the same application API; the diagram shows the browser path only. Original diagram; repository-wide licensing remains undecided.*
 
 ## Core design
 
@@ -14,7 +14,7 @@ FactHarborDSS is in planning. The diagram shows the selected design, not an impl
 - **Separate source evaluation:** Source Reliability has its own service interface and database. Its role in the first milestone remains undecided.
 - **Permissions enforced in code:** access, report release and external actions are checked separately. Retrieved documents and AI assessments cannot grant authority; source restrictions also apply to derived reports.
 
-The first milestone focuses on web evidence and minimal claim assessment. Broader decision workflows, working-agent access and controlled external actions come later. The [pipeline](Pipeline.md) explains the broader assessment and agent-debate design.
+The first milestone focuses on web evidence and minimal claim assessment. From that milestone on, technical users such as working AI agents would get the same functions as people through the same API as the browser interface, acting for a responsible person; confirmations, permissions and approvals stay with people. Broader decision workflows and controlled external actions come later. The [pipeline](Pipeline.md) explains the broader assessment and agent-debate design.
 
 ## Planning documents
 

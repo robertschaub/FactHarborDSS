@@ -8,7 +8,7 @@
 
 FactHarborDSS is a planned tool for **checking factual claims** and, later, **comparing courses of action**. It aims to make conclusions easier to inspect and challenge—with clear evidence, reasons and uncertainty.
 
-Designed for people and, later, working AI agents.
+Designed for people and for technical users, such as other software and working AI agents acting for a responsible person, with the same functions through an API.
 
 [How it would work](Concept.md){ .md-button .md-button--primary }
 [Cooperate with us](Cooperation.md){ .md-button }

@@ -28,6 +28,6 @@ Evidence alone grants no permission. A recommendation, permission to disclose th
 
 The public EGA work defines the concept and prototype direction. The separate AI Charter Runtime is runnable but unfinished, with simulated scenarios and local test effects. Neither establishes a completed DSS integration.
 
-DSS is intended to provide a shared evidence and assessment core for humans and working AI agents. Its first development milestone is narrower: human-facing web evidence capture/replay and minimal claim assessment. Working-agent access and action integration remain later scope; see the [planned architecture](Architecture.md).
+DSS is intended to provide a shared evidence and assessment core for humans and working AI agents. Its first development milestone is narrower: web evidence capture/replay and minimal claim assessment, planned for people and, through an API with the same functions, for working agents acting for a responsible person. Action integration remains later scope; see the [planned architecture](Architecture.md).
 
 [Explore EGA](https://robertschaub.github.io/our-ai-charter/Assurance/Concepts/evidence-gated-agents/) · [Runtime proof of concept](https://github.com/robertschaub/ai-charter-runtime) · [Published articles](https://robertschaub.github.io/our-ai-charter/Published/)
