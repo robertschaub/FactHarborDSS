@@ -79,7 +79,7 @@
 <text x="515" y="1279" class="small" text-anchor="start">Otherwise withhold; permitted status only</text>
 <rect x="250" y="1290" width="500" height="65" rx="12" fill="#dde9e2" stroke="#56766b" stroke-width="1.8"/>
 <text x="500.0" y="1321" class="head" text-anchor="middle">Permitted report / evidence view</text>
-<text x="500" y="1394" class="small" text-anchor="middle">A required task or check cannot be skipped because resources run out.</text>
+<text x="500" y="1394" class="small" text-anchor="middle">A required task or check that cannot run is named as missing, never silently skipped.</text>
 <text x="500" y="1423" class="small" text-anchor="middle">Consensus grants neither truth nor permission. External actions have a separate gate.</text>
 <a href="https://robertschaub.github.io/FactHarbor/diagrams/homepage-method.svg">
 <text x="500" y="1461" class="small" text-anchor="middle">Adapted from a diagram by FactHarbor contributors</text>
