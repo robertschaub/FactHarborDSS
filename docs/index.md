@@ -11,7 +11,7 @@ FactHarborDSS is a planned AI-assisted tool for **checking factual claims** and,
 It would serve people directly and, through an API with the same functions, software and AI agents acting for a person.
 
 [How it would work](Concept.md){ .md-button .md-button--primary }
-[Key requirements](Requirements.md){ .md-button }
+[Principles](Requirements.md){ .md-button }
 [Cooperate with us](Cooperation.md){ .md-button }
 
 </div>
@@ -33,7 +33,7 @@ These are design commitments, not delivered functionality.
 - **Gaps are named, not hidden.** Missing or conflicting evidence and atomic claims that could not be assessed are listed in the report; fact-checking continues and names them instead of stopping.
 - **People decide.** DSS would provide an inspectable basis, not authority. Confirming goals and approving actions stay with people; any external action needs separate authorization.
 
-The [key requirements](Requirements.md) set out these commitments in more detail.
+The [principles](Requirements.md) set out these commitments in more detail.
 
 ## Planned stages
 

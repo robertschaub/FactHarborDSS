@@ -22,7 +22,7 @@ Funding and engineering capacity could support Stage 1 with agreed deliverables:
 
 Comparative assessment-quality evaluation and the later decision pilot need their own scope and resources. Successful development checks alone do not establish suitability for operational use.
 
-This repository publishes [how it would work](Concept.md), the [key requirements](Requirements.md), the [pipeline](Pipeline.md) and the [architecture overview](Architecture.md). We supply detailed requirements and acceptance criteria with each agreed piece of work.
+This repository publishes [how it would work](Concept.md), the [principles](Requirements.md), the [pipeline](Pipeline.md) and the [architecture overview](Architecture.md). We supply detailed requirements and acceptance criteria with each agreed piece of work.
 
 Partner introductions, research collaboration, fundraising and clear public communication are also welcome.
 

@@ -37,4 +37,4 @@ The Alpha column describes its source code and default configuration as of late 
 | Source reliability | A model rates each source from a search about it, a second model may correct the rating, and code caps it for some source types; its weighting of verdicts is switched off by default | Rated from cited third-party material, with insufficient data shown separately and no caps or formulas |
 | Derivative evidence | Flagged and down-weighted; originals are not fetched, though a claim lacking primary sources may get one extra search | Originals of the evidence a verdict rests on are sought within the search allowance |
 
-See [how it would work](Concept.md), the [key requirements](Requirements.md), [reasons for a fresh implementation](Rationale.md) and the [planned architecture](Architecture.md).
+See [how it would work](Concept.md), the [principles](Requirements.md), [reasons for a fresh implementation](Rationale.md) and the [planned architecture](Architecture.md).

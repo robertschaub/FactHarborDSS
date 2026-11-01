@@ -27,4 +27,4 @@ For decisions, people set the priorities. A recommendation does not itself autho
 
 <a id="start-small-demonstrate-usefulness"></a>
 
-The [key requirements](Requirements.md) set out the commitments behind this, and the [home page](index.md#planned-stages) lists the planned stages.
+The [principles](Requirements.md) set out the commitments behind this, and the [home page](index.md#planned-stages) lists the planned stages.

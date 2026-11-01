@@ -1,108 +1,8 @@
-# Key requirements
-
-These are the most important requirements for the planned DSS: what it must and must not do. They are design commitments, not delivered functionality. Which of them Stage 1 covers, and in what form, is set when it is scoped; reports say what was not assessed.
+# Principles
 
 <a id="how-the-parts-fit-together"></a>
 
-## Main records and how they relate
-
-Like the FactHarbor Alpha, DSS splits a claim into atomic claims, statements that can each be checked on their own, and gives each one its own assessment. The overall assessment builds on these. Assessments cite evidence items that quote exact passages in captured documents, and evidence with a compatible scope can be grouped into claim assessment boundaries. Every judgment records how it was established, and the report names gaps as limitations.
-
-```mermaid
-erDiagram
-  Claim ||--|{ AtomicClaim : "split into"
-  Claim ||--o{ OverallAssessment : "assessed in"
-  OverallAssessment ||--|{ AtomicClaimAssessment : "built on"
-  AtomicClaim ||--o{ AtomicClaimAssessment : "assessed in"
-  AtomicClaim |o--o{ SearchQuery : "searched with"
-  SearchQuery }o--o{ Document : finds
-  AtomicClaimAssessment ||--o{ Citation : cites
-  Citation }o--|| EvidenceItem : "refers to"
-  AtomicClaimAssessment ||--o{ BoundaryFinding : "finds per boundary"
-  BoundaryFinding }o--|| ClaimAssessmentBoundary : for
-  ClaimAssessmentBoundary }o--o{ EvidenceItem : groups
-  EvidenceItem }o--|| Document : "extracted from"
-  Document }o--o{ Document : "derived from"
-  Document }o--|{ Source : "published by"
-  Source ||--o{ ReliabilityEvaluation : "rated in"
-  EvidenceItem }o--o| ReliabilityEvaluation : "weighed using"
-  ReportEdition }o--o{ OverallAssessment : presents
-  ReportEdition }o--o{ Limitation : names
-  AtomicClaimAssessment |o--o{ Limitation : "limited by"
-  OverallAssessment |o--o{ Limitation : "limited by"
-  Claim {
-    text wording "exact, as submitted"
-    text context "speaker, date, venue"
-  }
-  AtomicClaim["Atomic claim"] {
-    text statement
-    label role "supports, contradicts or context"
-    text expected_evidence
-    label harm_potential "for scrutiny, never weight"
-    text necessary_assignments "subject, matter, time, relation"
-  }
-  AtomicClaimAssessment["Atomic claim assessment"] {
-    int truth_score "0-100, with a verdict only"
-    label verdict "seven labels, unverified or not assessed"
-    label confidence
-    text overturn_conditions
-    label established_by
-  }
-  OverallAssessment["Overall assessment"] {
-    text reading "other readings named"
-    int truth_score "with a verdict only"
-    label verdict "or not synthesized, with reason"
-    label confidence
-    text decisive_atomic_claims "per direction"
-    label established_by
-  }
-  SearchQuery["Search query"] {
-    text query
-    label purpose "supporting, contradicting, origin or follow-up"
-  }
-  Citation {
-    label direction "supports, contradicts or qualifies"
-    label assignment "for decisive atomic claims"
-    label established_by
-  }
-  BoundaryFinding["Boundary finding"] {
-    label direction "supports, contradicts or mixed"
-    text reasoning
-  }
-  ClaimAssessmentBoundary["Claim assessment boundary"] {
-    text scope "compatible method, period, region"
-  }
-  EvidenceItem["Evidence item"] {
-    text statement_and_quote
-    label foundedness
-    label origin_status
-    text scope "method, period, region"
-    label weight_level "very strong to very weak"
-    label established_by
-  }
-  Document["Captured document"] {
-    time captured_at
-    label authenticity "for decisive evidence"
-  }
-  Source {
-    text publisher_or_author
-  }
-  ReliabilityEvaluation["Reliability evaluation"] {
-    label rating "seven labels or insufficient data"
-    text cited_material
-    date evaluated_on
-  }
-  ReportEdition["Report edition"] {
-    time issued_at
-    text supersedes "earlier edition, if corrected"
-  }
-  Limitation {
-    label type
-    text reason
-  }
-```
-
-*Simplified conceptual model of the planned design, not a database schema. Read each line as a sentence, for example "a claim is split into one or more atomic claims". At a line end, a bar means one, a crow's foot many and a circle zero.*
+These principles set out what the planned DSS must and must not do. They are design commitments, not delivered functionality. Which of them Stage 1 covers, and in what form, is set when it is scoped; reports say what was not assessed. The records they refer to are shown in the [core data model](Architecture.md#core-data-model).
 
 ## Results and their meaning
 
@@ -158,4 +58,4 @@ erDiagram
 - **Method, not the single case:** measured agreement with independent reviewers describes the method, not an individual verdict.
 - **Effort:** evaluation also measures whether DSS makes human checking faster and more complete.
 
-See the [analysis pipeline](Pipeline.md) for how these requirements fit into the planned workflow.
+See the [analysis pipeline](Pipeline.md) for how these principles fit into the planned workflow.

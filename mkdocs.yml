@@ -63,7 +63,7 @@ nav:
       - Our AI Charter and EGA: Charter-and-EGA.md
       - Association and projects: Background.md
   - Planned design:
-      - Key requirements: Requirements.md
+      - Principles: Requirements.md
       - Analysis pipeline: Pipeline.md
       - Planned architecture: Architecture.md
       - Why a fresh implementation: Rationale.md

@@ -40,4 +40,4 @@ A report is a basis for decisions, not permission to act. External actions have 
 
 <a id="judgment-reliability"></a>
 
-See the [key requirements](Requirements.md), the [system architecture](Architecture.md) and [how it would work](Concept.md).
+See the [principles](Requirements.md), the [system architecture](Architecture.md) and [how it would work](Concept.md).
