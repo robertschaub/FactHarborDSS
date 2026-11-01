@@ -22,14 +22,14 @@ AI-assisted analysis can sound convincing without showing what is actually estab
 
 ## What DSS would offer
 
-- **Who it is for:** anyone who needs to check a factual claim before relying on it, such as a statement in the news, a figure in a report or a claim in a document; later also people preparing a decision. Software and AI agents acting for a person would use the same functions.
+- **Who it would be for:** people who need to check a factual claim before relying on it, such as a statement in the news, a figure in a report or a claim in a document. Stage 1 would start with descriptive claims, such as dates, events and figures, checked against public web sources. Later also people preparing a decision. Software and AI agents acting for a person would use the same functions.
 - **What you would do:** submit a factual claim. Later you could also describe a decision, with your goals and constraints and the options you are considering.
-- **What you would get:** a report with a verdict for each atomic claim, that is, each part of the claim that can be checked on its own, and for the claim as a whole, each with a separate confidence. It shows the evidence for and against, with exact quotes and their sources, what remains uncertain or missing, what would change the verdict, and which steps were AI judgments rather than checks.
-- **What stays with you:** DSS would not decide or act for you. It provides an inspectable basis and saves the evidence it examined, so the assessment can be checked again later.
+- **What you would get:** a report with a verdict and a separate confidence for each atomic claim, that is, each part of the claim that can be assessed on its own, and, where justified, for the claim as a whole; where no verdict is justified, it says why. It shows the evidence for and against, with exact quotes and their sources, what remains uncertain or missing, what would change the verdict, and which steps were AI judgments rather than checks. For a decision, a later stage would compare the options against your goals and constraints and name the open decisive questions.
+- **What stays with you:** DSS would not decide for you. In a later stage, any action would need separate authorization and be checked under Evidence-Gated Agents. DSS provides an inspectable basis and saves the evidence it examined, so people can re-examine the assessment later.
 
 <a id="the-approach"></a>
 
-[How it would work](Concept.md) describes the process. DSS follows a few core [principles](Requirements.md): it supports decisions and does not make them, an assessment is not a fact, only a check establishes, agreement is not a check, and a result never grants permission to act.
+[How it would work](Concept.md) describes the process. DSS follows a few core [principles](Requirements.md): it supports decisions and does not make them, an assessment is not a fact, only a check verifies, agreement is not a check, and a result never grants permission to act.
 
 ## Planned stages
 

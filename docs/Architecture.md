@@ -18,7 +18,7 @@ Stage 1 focuses on claim checking with public web sources and saved evidence. Fr
 
 ## Core data model
 
-Like the FactHarbor Alpha, DSS splits a claim into atomic claims, statements that can each be checked on their own, and gives each one its own assessment. The overall assessment builds on these. Assessments cite evidence items that quote exact passages in captured documents, and evidence with a compatible scope can be grouped into claim assessment boundaries. Every judgment records how it was established, and the report names gaps as limitations. The [principles](Requirements.md) set out the rules these records serve.
+Like the FactHarbor Alpha, DSS splits a claim into atomic claims, statements that can each be assessed on their own, and gives each one its own assessment. The overall assessment builds on these. Assessments cite evidence items that quote exact passages in captured documents, and evidence with a compatible scope can be grouped into claim assessment boundaries. Every judgment records how it was established, and the report names gaps as limitations. The [principles](Requirements.md) set out the rules these records serve.
 
 ```mermaid
 erDiagram
@@ -57,14 +57,16 @@ erDiagram
     int verdict "0 false to 100 true, if reached"
     label verdict_label "seven labels, unverified or not assessed"
     label confidence
+    text reasoning
     text overturn_conditions
     label established_by
   }
   OverallAssessment["Overall assessment"] {
     text reading "other readings named"
     int verdict "0 false to 100 true, if reached"
-    label verdict_label "or not synthesized, with reason"
+    label verdict_label "seven labels, unverified or not synthesized, with reason"
     label confidence
+    text reasoning
     text decisive_atomic_claims "per direction"
     label established_by
   }
@@ -80,13 +82,14 @@ erDiagram
   BoundaryFinding["Boundary finding"] {
     label direction "supports, contradicts or mixed"
     text reasoning
+    label established_by
   }
   ClaimAssessmentBoundary["Claim assessment boundary"] {
     text scope "compatible method, period, region"
   }
   EvidenceItem["Evidence item"] {
     text statement_and_quote
-    label foundedness
+    label substantiation "founded, partly, unfounded or not assessable"
     label origin_status
     text scope "method, period, region"
     label weight_level "very strong to very weak"
@@ -106,7 +109,7 @@ erDiagram
   }
   ReportEdition["Report edition"] {
     time issued_at
-    text supersedes "earlier edition, if corrected"
+    text supersedes "earlier edition and what changed, if corrected"
   }
   Limitation {
     label type
@@ -114,7 +117,7 @@ erDiagram
   }
 ```
 
-*Simplified conceptual model of the planned design, not a database schema. Read each line as a sentence, for example "a claim is split into one or more atomic claims". At a line end, a bar means one, a crow's foot many and a circle zero.*
+*Simplified conceptual model of the planned design for claim assessment, not a database schema; records for decisions and actions are not shown. Read each line as a sentence, for example "a claim is split into one or more atomic claims". At a line end, a bar means one, a crow's foot many and a circle zero.*
 
 ## Planning documents
 

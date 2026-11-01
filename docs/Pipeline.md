@@ -28,7 +28,7 @@ These are task roles, not necessarily five permanent agents or five different mo
 
 The baseline assessment would already examine counterevidence, including a search for contradicting evidence for each atomic claim. When no extra agent is needed, the direct path still undergoes mandatory checks. A required challenge cannot be skipped because another agent agrees. If it cannot run, for example because the budget has run out, it is reported as missing; see [gaps, limits and corrections](Requirements.md#gaps-limits-and-corrections).
 
-Reconciliation follows the substance of an objection, not the number of agents supporting it. A demonstrated reasoning or quotation defect can justify correction without a new source; unsupported disagreement does not automatically reduce a score. Material unresolved issues constrain the conclusion and its intended use.
+Reconciliation follows the substance of an objection, not the number of agents supporting it. A demonstrated reasoning or quotation defect can justify correction without a new source; unsupported disagreement does not automatically lower a verdict or its confidence. Material unresolved issues constrain the conclusion and its intended use.
 
 The controller may refine, ask a person, or return a limited result, hold or stop; further rounds do not reset limits. In a plain fact-check, analytical findings never stop the work or prompt questions; they are named in the report.
 

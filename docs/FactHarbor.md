@@ -12,7 +12,7 @@ The existing **FactHarbor application (Alpha)** provides experience to build on.
 
 DSS is designed to keep the Alpha's analysis structure:
 
-- **Atomic claims, each with its own verdict:** a verdict from 0 (false) to 100 (true) with seven labels and a separate confidence.
+- **Atomic claims, each with its own verdict:** from 0 (false) to 100 (true), shown in the Alpha as a truth percentage, with seven labels and a separate confidence.
 - **Evidence items** with the extracted statement, the quoted passage, the source type, whether the item derives from another source, and the scope of its data, such as method, period and region.
 - **Claim assessment boundaries** that group evidence with a compatible scope, with a finding per boundary where they lead to different conclusions.
 - **Search for contradicting evidence**, not only for support.

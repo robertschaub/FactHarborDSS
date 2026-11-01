@@ -15,7 +15,7 @@ FactHarborDSS is intended to turn a question into a conclusion whose evidence an
 
 *Simplified adaptation of the FactHarbor/DSS design. Attribution: FactHarbor contributors · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · [Public visual lineage](https://robertschaub.github.io/FactHarbor/diagrams/homepage-method.svg).*
 
-A claim is split into atomic claims, statements that can each be checked on their own. Each atomic claim is assessed with its own evidence and verdict, and the overall verdict builds on the decisive ones.
+A claim is split into atomic claims, statements that can each be assessed on their own. Each atomic claim is assessed with its own evidence and verdict, and the overall verdict builds on the decisive ones.
 
 ## What the reader should gain
 
