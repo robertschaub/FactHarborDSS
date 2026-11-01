@@ -34,17 +34,7 @@ The controller can admit useful refinement or request human input within the sam
 
 ## Judgment reliability
 
-In the planned design, assessments rely on guided model judgment rather than hand-set weights. Reliability comes from recording, separating and measuring judgments:
-
-- **Recorded basis:** each assessment records the interpretation of the question or claim, the key details considered, the evidence capture dates, and the versions of the assessment schema and scale.
-- **How each result was established:** each result records every way it was established: captured, checked by trusted code, judged by a model, or reviewed or adopted by a person. Only trusted-code or human checks are called checked, validated or verified, and a verdict is labelled as a model judgment.
-- **Decisive parts and overturn conditions:** a true or mostly true verdict requires the parts decisive for it to be supported, and a false or mostly false verdict requires the parts decisive for it to be contradicted; which parts are decisive is itself a model judgment. In fact-checking, if a verdict still contradicts this after one correction attempt, the report marks the contradiction. Each verdict names the evidence or finding that would change it.
-- **Named limits instead of stops:** in fact-checking, uncertainty, missing or conflicting evidence and parts that could not be assessed are named in the report instead of stopping the analysis; access, disclosure and release checks still apply.
-- **Separate states:** conflicting evidence, insufficient evidence and no assessment are distinct outcomes.
-- **Repeated runs:** if runs are repeated on the same captured evidence, the verdict is never set by picking a favorable run, rerunning until runs agree, or voting or averaging. A single run means stability is not measured. Whether and how run variation is shown is decided after reader testing.
-- **Separate measures:** evidence sufficiency and any observed run variation stay separate and are never merged into one score. Run variation is also kept apart from the verdict and its confidence. A model's stated confidence always comes with its evidence-based reasons, is not a calibrated probability and never establishes correctness on its own.
-- **Evidence assessed before it counts:** the model first assesses whether each cited document substantiates its statement, for example with data, method or checkable sources, and whether it is the original source. Unfounded material is not counted as evidence and is named in the report. For evidence a verdict rests on, the original source is sought and assessed within the run's search allowance; if it is not found or not sought, the report says so.
-- **Weighed, not counted:** the model gives each cited evidence item a reasoned weight level, from very strong to very weak (not considered), based on its documentation, origin, independence and the reliability of its source. No numeric weights, scores or formulas apply. The model rates source reliability from cited third-party material, such as fact-checks, correction records and ownership, never from its recollection; insufficient data is a separate result, not a low rating. These assessments are shown to readers. Where no source-reliability evaluation is available, reliability is shown as not assessed.
+In the planned design, assessments rely on guided model judgment rather than hand-set weights. Reliability comes from recording, separating and measuring judgments; the [key requirements](Requirements.md) set out how.
 
 ## From candidate to permitted report
 

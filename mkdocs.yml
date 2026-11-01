@@ -59,6 +59,7 @@ nav:
       - Our AI Charter and EGA: Charter-and-EGA.md
   - Product:
       - Purpose and approach: Concept.md
+      - Key requirements: Requirements.md
       - Analysis pipeline and debate: Pipeline.md
       - Why a fresh implementation: Rationale.md
       - Planned architecture: Architecture.md

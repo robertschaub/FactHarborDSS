@@ -18,4 +18,4 @@ The first milestone focuses on web evidence and minimal claim assessment. From t
 
 ## Planning documents
 
-This repository's [project concept](Concept.md) and [analysis pipeline](Pipeline.md) complement this architecture overview. Agreed contributions need concrete requirements and acceptance criteria supplied alongside their scope.
+This repository's [project concept](Concept.md), [key requirements](Requirements.md) and [analysis pipeline](Pipeline.md) complement this architecture overview. Agreed contributions need concrete requirements and acceptance criteria supplied alongside their scope.

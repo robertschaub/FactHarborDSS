@@ -22,7 +22,7 @@ Funding and engineering capacity could support an initial phase with agreed deli
 
 Comparative assessment-quality evaluation and the later decision pilot need their own scope and resources. Successful development checks alone do not establish suitability for operational use.
 
-This repository publishes the [concept](Concept.md), [pipeline](Pipeline.md) and [architecture overview](Architecture.md). Detailed task requirements and acceptance criteria must be supplied before dependent work begins.
+This repository publishes the [concept](Concept.md), [key requirements](Requirements.md), [pipeline](Pipeline.md) and [architecture overview](Architecture.md). Detailed task requirements and acceptance criteria must be supplied before dependent work begins.
 
 Partner introductions, research collaboration, fundraising and clear public communication are also welcome.
 
