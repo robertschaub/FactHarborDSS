@@ -2,6 +2,81 @@
 
 These are the most important requirements for the planned DSS: what it must and must not do. They are design commitments, not delivered functionality. Early milestones deliver some of them in simplified form, and reports say what was not assessed.
 
+## How the parts fit together
+
+The diagram shows the main objects these requirements refer to in fact-checking. A claim consists of parts; each assessment states every part and cites evidence through links that quote exact passages in captured source versions. Every assessment and evidence link records how it was established, and gaps are named as limitations.
+
+```mermaid
+erDiagram
+  ReportEdition }o--|{ Assessment : contains
+  Claim ||--o{ Assessment : "assessed in"
+  Claim ||--|{ Part : "consists of"
+  Assessment }o--|{ Part : "states each"
+  Assessment ||--o{ EvidenceLink : cites
+  Part ||--o{ EvidenceLink : "supported, contradicted or qualified by"
+  EvidenceLink }o--|| Passage : quotes
+  Passage }o--|| SourceVersion : "located in"
+  SourceVersion }o--|| Source : "published by"
+  SourceVersion |o--o{ SourceVersion : "original of"
+  Source ||--o{ ReliabilityEvaluation : "rated in"
+  Assessment }o--o{ ReliabilityEvaluation : uses
+  Assessment ||--o{ Limitation : names
+  Assessment ||--|{ EstablishmentRoute : records
+  EvidenceLink ||--|{ EstablishmentRoute : records
+  ReportEdition {
+    time fixed_at
+    label release_per_recipient
+  }
+  Claim {
+    text exact_wording
+    text interpretation
+  }
+  Part {
+    flag decisive
+    label state
+    text necessary_assignments
+  }
+  Assessment {
+    label verdict_or_unverified_reason
+    label confidence
+    text what_would_change_it
+  }
+  EvidenceLink {
+    label direction
+    label foundedness
+    label origin_status
+    label weight_level
+    label assignment_decisive_only
+  }
+  Passage {
+    text exact_quote
+    text location
+  }
+  SourceVersion {
+    time captured_at
+    hash fingerprint
+    label authenticity_decisive_only
+  }
+  Source {
+    text publisher_institution_or_author
+  }
+  ReliabilityEvaluation {
+    label rating_or_insufficient_data
+    label confidence
+    text cited_third_party_material
+    date evaluated_on
+  }
+  EstablishmentRoute {
+    label captured_code_model_or_person
+  }
+  Limitation {
+    label type
+    text reason
+  }
+```
+
+*Simplified conceptual model of the planned design, not a database schema.*
+
 ## Results and their meaning
 
 - **Verdict and confidence:** a factual verdict combines a truth score and a readable label with a separate confidence in the assessment. Neither is a calibrated probability.
