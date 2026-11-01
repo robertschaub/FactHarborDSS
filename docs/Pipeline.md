@@ -38,6 +38,8 @@ In the planned design, assessments rely on guided model judgment rather than han
 
 - **Recorded basis:** each assessment records the interpretation of the question or claim, the key details considered, the evidence capture dates, and the versions of the assessment schema and scale.
 - **How each result was established:** each result records every way it was established: captured, checked by trusted code, judged by a model, or reviewed or adopted by a person. Only trusted-code or human checks are called checked, validated or verified, and a verdict is labelled as a model judgment.
+- **Decisive parts and overturn conditions:** a true or mostly true verdict requires the parts decisive for it to be supported, and a false or mostly false verdict requires the parts decisive for it to be contradicted; which parts are decisive is itself a model judgment. In fact-checking, if a verdict still contradicts this after one correction attempt, the report marks the contradiction. Each verdict names the evidence or finding that would change it.
+- **Named limits instead of stops:** in fact-checking, uncertainty, missing or conflicting evidence and parts that could not be assessed are named in the report instead of stopping the analysis; access, disclosure and release checks still apply.
 - **Separate states:** conflicting evidence, insufficient evidence and no assessment are distinct outcomes.
 - **Repeated runs:** if runs are repeated on the same captured evidence, the verdict is never set by picking a favorable run, rerunning until runs agree, or voting or averaging. A single run means stability is not measured. Whether and how run variation is shown is decided after reader testing.
 - **Separate measures:** evidence sufficiency and any observed run variation stay separate and are never merged into one score. Run variation is also kept apart from the verdict and its confidence. A model's self-reported confidence is never used alone.
@@ -45,7 +47,7 @@ In the planned design, assessments rely on guided model judgment rather than han
 
 ## From candidate to permitted report
 
-Reports retain material objections, dispositions, changes, reasons, uncertainty and stopping conditions—not raw debate transcripts. Only a valid candidate becomes a fixed report edition. Recipient-specific access, disclosure, quality and any required human review still govern release; a misleading redaction must be withheld.
+Reports retain material objections, dispositions, changes, reasons, uncertainty and stopping conditions—not raw debate transcripts. Only a structurally valid candidate becomes a fixed report edition; in fact-checking it marks any remaining contradictions and excluded evidence. Recipient-specific access, disclosure, quality and any required human review still govern release; a misleading redaction must be withheld.
 
 A report is evidence, not permission to act. External actions have a separate authorization and execution path and are outside this simplified diagram.
 
