@@ -20,7 +20,7 @@ The controller selects only required or justified tasks, their dependencies and 
 | Challenger / specialist | Examine counterevidence, alternative explanations, citation or scope defects, or a specific expert question. |
 | Self-consistency | Examine instability or contradictions on comparable inputs. Repetition and agreement add no independent evidence. |
 | Reconciler | Accept, reject or retain each material objection as unresolved, with reasons; revise affected findings where justified. |
-| Support assessor | Judge whether the cited passages support the claim, using a method that must first pass independent evaluation. This remains a model judgment and is labelled as one; it is never presented as verified, validated or checked. Trusted code separately checks reference existence, exact quotations, evidence dates, versions, arithmetic and current authority. No source weights or evidence-count formulas apply. Its assessment grants no release or action permission. |
+| Support assessor | Judge whether the cited passages support the claim, using a method that must first pass independent evaluation. This remains a model judgment and is labelled as one; it is never presented as verified, validated or checked. Trusted code separately checks reference existence, exact quotations, evidence dates, versions, arithmetic and current authority. No numeric source weights or evidence-count formulas apply. Its assessment grants no release or action permission. |
 
 These are task roles, not necessarily five permanent agents or five different models. Different role names do not establish independence. The controller joins only the dependencies it admitted, rejects stale or incompatible results, and retains an explicit outcome for failed or cancelled tasks.
 
@@ -43,7 +43,8 @@ In the planned design, assessments rely on guided model judgment rather than han
 - **Separate states:** conflicting evidence, insufficient evidence and no assessment are distinct outcomes.
 - **Repeated runs:** if runs are repeated on the same captured evidence, the verdict is never set by picking a favorable run, rerunning until runs agree, or voting or averaging. A single run means stability is not measured. Whether and how run variation is shown is decided after reader testing.
 - **Separate measures:** evidence sufficiency and any observed run variation stay separate and are never merged into one score. Run variation is also kept apart from the verdict and its confidence. A model's self-reported confidence is never used alone.
-- **Source information, not source weights:** source type, ownership, independence and track record inform the assessment and are shown to readers. They are never applied as a weight or gate. Publisher ratings recalled by a model are not used.
+- **Evidence assessed before it counts:** the model first assesses whether each document substantiates its statement, for example with data, method or checkable sources, and whether it is the original source. Unfounded material is not counted as evidence and is named in the report. For evidence a verdict rests on, the original source is sought and assessed.
+- **Weighed, not counted:** the model gives each evidence item a reasoned weight level, from very strong to very weak (not considered), based on its documentation, origin, independence and the reliability of its source. No numeric weights, scores or formulas apply. The model rates source reliability from cited third-party material, such as fact-checks, correction records and ownership, never from its recollection; insufficient data is a separate result, not a low rating. These assessments are shown to readers.
 
 ## From candidate to permitted report
 
