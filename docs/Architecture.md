@@ -54,16 +54,16 @@ erDiagram
     text necessary_assignments "subject, matter, time, relation"
   }
   AtomicClaimAssessment["Atomic claim assessment"] {
-    int truth_score "0-100, with a verdict only"
-    label verdict "seven labels, unverified or not assessed"
+    int verdict "0 false to 100 true, if reached"
+    label verdict_label "seven labels, unverified or not assessed"
     label confidence
     text overturn_conditions
     label established_by
   }
   OverallAssessment["Overall assessment"] {
     text reading "other readings named"
-    int truth_score "with a verdict only"
-    label verdict "or not synthesized, with reason"
+    int verdict "0 false to 100 true, if reached"
+    label verdict_label "or not synthesized, with reason"
     label confidence
     text decisive_atomic_claims "per direction"
     label established_by

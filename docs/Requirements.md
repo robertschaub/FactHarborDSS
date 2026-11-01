@@ -4,10 +4,22 @@
 
 These principles set out what the planned DSS must and must not do. They are design commitments, not delivered functionality. Which of them Stage 1 covers, and in what form, is set when it is scoped; reports say what was not assessed. The records they refer to are shown in the [core data model](Architecture.md#core-data-model).
 
+## Core principles
+
+1. **An assessment is not a fact.** DSS assesses claims, but every verdict is labelled as a model judgment. It establishes no fact and carries no authority.
+2. **Only a check establishes.** A statement counts as established only when trusted code or a person has checked it, and a model never gives its own output that status. What is established, what lacks essential evidence and what remains a model judgment are always shown separately.
+3. **Agreement is not a check.** When a model reviews another model's work, or several models or runs agree, the result is still a model judgment.
+4. **An authentic source can be about something else.** Whether a cited passage concerns the right person or institution, matter, time and relation remains a model judgment until a person checks it. Search can confuse similar records, so a search hit is only a candidate until it has been assessed.
+5. **Method quality is not proof in the single case.** Measured agreement with independent reviewers describes the method, not an individual verdict. DSS is meant to make human checking faster and more complete, not to replace it, and that benefit must be measured.
+6. **Every verdict shows its basis and its limits.** It states how well the evidence supports it, what would change it and what is missing; gaps are named, not hidden.
+7. **A result never grants permission.** Permission to share or act is given separately and needs its own justification. Urgency never turns uncertainty into knowledge or waives a required check.
+
+The sections below set out how DSS applies these principles.
+
 ## Results and their meaning
 
 - **Atomic claims first.** A claim is split into atomic claims; a simple claim is one atomic claim, whose verdict is then also the overall verdict. Each atomic claim gets its own verdict, confidence, reasoning and cited evidence. The overall verdict is a separate judgment built on the atomic claims decisive for it; it never averages their verdicts or counts how many are supported. Where no overall verdict is justified, the report says so and the atomic-claim verdicts stand.
-- **Verdict and confidence.** A factual verdict combines a truth score from 0 (false) to 100 (true), set by model judgment, with the readable label that fixed rules assign to it, and a separate confidence explained by the evidence and the completeness of the search. Neither is a calibrated probability, and no formula derives them from weight levels, reliability labels or item counts.
+- **Verdict and confidence.** A factual verdict is set by model judgment on a scale from 0 (false) to 100 (true), and fixed rules assign its readable label. A separate confidence is explained by the evidence and the completeness of the search. Neither is a calibrated probability, and no formula derives them from weight levels, reliability labels or item counts.
 - **Separate states.** Mixed is a supported middle result: the evidence shows the claim to be about as much true as false. Unverified means that no adequately supported judgment was reached, for a stated reason: insufficient evidence or an unresolved conflict. A claim that could not be assessed, or an assessment that failed or did not run, is a separate state. Finding no evidence never produces False or a midpoint score.
 - **Reading and scope.** The original wording is kept. An ambiguous claim is assessed in its most plausible reading, with its own qualifiers neither strengthened nor weakened; other material readings and atomic claims that were not assessed are named. Opinions and value judgments get no truth verdict and are named as not assessable. A literally accurate but misleading claim keeps its factual verdict, and the misleading framing is explained separately.
 - **Basis and overturn conditions.** Each verdict states how well the evidence supports it and names the evidence or finding that would change it. A true, mostly true, false or mostly false verdict on an atomic claim cites at least one considered evidence item in its direction, or a recorded inference or calculation.
@@ -16,8 +28,7 @@ These principles set out what the planned DSS must and must not do. They are des
 ## How each result was established
 
 - **Each result says how it was established:** captured, checked by trusted code (fixed, tested software rules), judged by a model, or reviewed or adopted by a person. Only checks by trusted code or people are called checked, validated or verified, and a verdict is labelled as a model judgment. A person's check is recorded with their role and covers only what they examined.
-- **Agreement is not a check.** When a model assesses another model's output, the result is still a model judgment. Agreement among models, roles or repeated runs never counts as a check.
-- **Right subject and context.** A genuine source can still be about something else. Whether an evidence item concerns the same subject, matter, time and relation as the atomic claim stays a model judgment until a person checks it; for decisive atomic claims, open questions are named.
+- **Right subject and context.** For the atomic claims a verdict rests on, the report shows whether each cited passage concerns the same subject, matter, time and relation, and names open questions.
 - **Recorded basis.** Each assessment records the reading of the claim, the context of the statement where known (speaker, date and venue), the key details considered, the evidence capture dates, and the versions of the assessment schema and scale.
 
 ## Evidence
@@ -44,8 +55,7 @@ These principles set out what the planned DSS must and must not do. They are des
 ## Decisions (later stage)
 
 - **People set the basis:** goals, constraints and priorities are confirmed by the responsible person.
-- **Open points:** the report names open decisive points as questions for the person deciding; possible consequences of an error are stated only where evidence supports them. Urgency never waives a required check.
-- **A basis, not permission:** a report is a basis for decisions, not permission to act. Disclosure, release and external actions are authorized separately.
+- **Open points:** the report names open decisive points as questions for the person deciding; possible consequences of an error are stated only where evidence supports them.
 
 ## People and software
 
@@ -55,7 +65,5 @@ These principles set out what the planned DSS must and must not do. They are des
 
 - **Before routine use:** methods must pass independent evaluation against reference judgments by competent reviewers, with pass criteria set before testing. Until then, results are labelled as coming from a method not yet independently evaluated.
 - **Independent reference judgments:** reviewers record their judgments before seeing DSS results, and disagreements are reported, not forced into consensus. Evaluation covers the reading of each claim and its decisive atomic claims as well as verdicts, and compares English and German versions of the same claims.
-- **Method, not the single case:** measured agreement with independent reviewers describes the method, not an individual verdict.
-- **Effort:** evaluation also measures whether DSS makes human checking faster and more complete.
 
 See the [analysis pipeline](Pipeline.md) for how these principles fit into the planned workflow.

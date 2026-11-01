@@ -20,20 +20,16 @@ It would serve people directly and, through an API with the same functions, soft
 
 AI-assisted analysis can sound convincing without showing what is actually established. A reader needs to see what supports a conclusion, what contradicts it, what is missing and which steps were model judgments.
 
+## What DSS would offer
+
+- **Who it is for:** anyone who needs to check a factual claim before relying on it, such as a statement in the news, a figure in a report or a claim in a document; later also people preparing a decision. Software and AI agents acting for a person would use the same functions.
+- **What you would do:** submit a factual claim. Later you could also describe a decision, with your goals and constraints and the options you are considering.
+- **What you would get:** a report with a verdict for each atomic claim, that is, each part of the claim that can be checked on its own, and for the claim as a whole, each with a separate confidence. It shows the evidence for and against, with exact quotes and their sources, what remains uncertain or missing, what would change the verdict, and which steps were AI judgments rather than checks.
+- **What stays with you:** DSS would not decide or act for you. It provides an inspectable basis and saves the evidence it examined, so the assessment can be checked again later.
+
 <a id="the-approach"></a>
 
-## How DSS is designed to work
-
-These are design commitments, not delivered functionality.
-
-- **AI judgments stay labelled.** Verdicts and evidence ratings are model judgments and are shown as such. Only checks by people, or by fixed software rules such as confirming that a quote appears in the saved source, count as checked; agreement between models never does.
-- **Each atomic claim gets its own verdict.** As in the FactHarbor Alpha, a claim is split into atomic claims, statements that can each be checked on their own. The overall verdict builds on the decisive ones, without averaging or counting.
-- **Evidence is weighed, not counted.** Searches also look for contradicting evidence. Each item is first assessed for whether it substantiates what it says and whether it is the original, then given a reasoned weight from very strong to very weak, with no numeric formula.
-- **Every verdict shows its basis.** It names the evidence and atomic claims it rests on, how well the evidence supports it and what would change it.
-- **Gaps are named, not hidden.** Missing or conflicting evidence and atomic claims that could not be assessed are listed in the report; fact-checking continues and names them instead of stopping.
-- **People decide.** DSS would provide an inspectable basis, not authority. Confirming goals and approving actions stay with people; any external action needs separate authorization.
-
-The [principles](Requirements.md) set out these commitments in more detail.
+[How it would work](Concept.md) describes the process. DSS follows a few core [principles](Requirements.md): an assessment is not a fact, only a check establishes, agreement is not a check, and a result never grants permission to act.
 
 ## Planned stages
 
