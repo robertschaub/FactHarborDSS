@@ -8,7 +8,7 @@ The proposed fresh implementation is intended to carry forward the experience an
 
 The maintainer's experience is that the Alpha has accumulated considerable code and complexity, making changes harder to manage. A fresh modular structure is intended to make responsibilities clearer, reduce unnecessary coupling and make changes easier to review.
 
-This does not imply discarding everything learned or automatically copying existing code. Useful designs and selected implementation candidates need deliberate reuse decisions.
+This does not mean discarding what was learned. DSS keeps the Alpha's analysis structure and changes how verdicts are combined and evidence is weighed; see [what DSS keeps and changes](FactHarbor.md). Reusing existing code needs deliberate decisions.
 
 ## Speed and running costs
 
@@ -26,7 +26,7 @@ Repeatable inputs support investigation; they do not guarantee identical model o
 
 Fact-checking asks what the evidence supports. Decision support adds human-confirmed goals, alternatives and constraints. EGA also asks whether a proposed step is supported and permitted to proceed.
 
-These uses can share evidence and reporting while keeping their methods and authority boundaries distinct. See the [concept](Concept.md) for their purpose and the [architecture](Architecture.md) for the selected foundations.
+These uses can share evidence and reporting while keeping their methods and authority boundaries distinct. See [how it would work](Concept.md) for their purpose and the [architecture](Architecture.md) for the selected foundations.
 
 ## Production readiness
 
@@ -42,6 +42,6 @@ A better structure may help both human contributors and coding agents. It does n
 
 ## Start small and test the reasons
 
-The first development target is bounded web evidence capture and replay with minimal claim assessment. Comparative evaluation follows separately. Continue, narrow or reconsider the work based on demonstrated benefit, not the fact that a rewrite has begun.
+Stage 1 is bounded claim checking with public web sources and saved evidence. Comparative evaluation follows separately. Continue, narrow or reconsider the work based on demonstrated benefit, not the fact that a rewrite has begun.
 
 The initial work must therefore produce evidence about quality, usefulness and effort as well as functioning software. The [cooperation options](Cooperation.md) explain how cases, reviewers, engineering capacity and funding could support that process.

@@ -1,4 +1,4 @@
-# What FactHarborDSS would do
+# How FactHarborDSS would work
 
 FactHarborDSS is intended to turn a question into a conclusion whose evidence and reasoning people can inspect.
 
@@ -15,16 +15,16 @@ FactHarborDSS is intended to turn a question into a conclusion whose evidence an
 
 *Simplified adaptation of the FactHarbor/DSS design. Attribution: FactHarbor contributors · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · [Public visual lineage](https://robertschaub.github.io/FactHarbor/diagrams/homepage-method.svg).*
 
+A claim is split into atomic claims, statements that can each be checked on their own. Each atomic claim is assessed with its own evidence and verdict, and the overall verdict builds on the decisive ones.
+
 ## What the reader should gain
 
 - **An inspectable basis:** the sources and passages actually examined.
-- **A reasoned assessment:** supporting evidence, objections and unresolved gaps.
-- **An honest result:** clear scope, uncertainty and limitations—including when no conclusion is justified.
+- **A reasoned assessment:** supporting and contradicting evidence, objections and unresolved gaps, for each atomic claim and overall.
+- **An honest result:** clear scope, uncertainty and limitations, including when no conclusion is justified.
 
 For decisions, people set the priorities. A recommendation does not itself authorize sharing information or taking action.
 
-## Start small, demonstrate usefulness
+<a id="start-small-demonstrate-usefulness"></a>
 
-The first phase focuses on public-web claims and saved evidence that can be reassessed. Comparative evaluation would follow; file-based decision support comes later. DSS must demonstrate benefit against existing tools and workflows.
-
-See the [planned architecture](Architecture.md) or [ways to cooperate](Cooperation.md).
+The [key requirements](Requirements.md) set out the commitments behind this, and the [home page](index.md#planned-stages) lists the planned stages.

@@ -58,15 +58,15 @@ extra:
 nav:
   - Overview:
       - Home: index.md
-      - Association and projects: Background.md
+      - How it would work: Concept.md
       - From FactHarbor to DSS: FactHarbor.md
       - Our AI Charter and EGA: Charter-and-EGA.md
-  - Product:
-      - Purpose and approach: Concept.md
+      - Association and projects: Background.md
+  - Planned design:
       - Key requirements: Requirements.md
-      - Analysis pipeline and debate: Pipeline.md
-      - Why a fresh implementation: Rationale.md
+      - Analysis pipeline: Pipeline.md
       - Planned architecture: Architecture.md
+      - Why a fresh implementation: Rationale.md
   - Cooperation:
       - Partnerships and funding: Cooperation.md
       - Explore and contact: Links.md

@@ -11,11 +11,11 @@ FactHarborDSS is in planning. The diagram shows the selected design, not an impl
 - **One application:** a TypeScript interface served by C#/.NET 10, with a worker initially running in the same process.
 - **Traceable evidence:** PostgreSQL stores captured web content, source versions, assessments, reports and durable jobs. Full-text search provides the retrieval baseline.
 - **Repeatable evidence basis:** reassessment uses the saved version without hidden fetching. Refreshes create new versions; model outputs may still differ.
-- **Separate source evaluation:** Source Reliability has its own service interface and database. Its role in the first milestone remains undecided.
+- **Separate source evaluation:** Source Reliability has its own service interface and database. Its role in Stage 1 remains undecided.
 - **Permissions enforced in code:** access, report release and external actions are checked separately. Retrieved documents and AI assessments cannot grant authority; source restrictions also apply to derived reports.
 
-The first milestone focuses on web evidence and minimal claim assessment. From that milestone on, technical users such as working AI agents would get the same functions as people through the same API as the browser interface, acting for a responsible person; confirmations, permissions and approvals stay with people. Broader decision workflows and controlled external actions come later. The [pipeline](Pipeline.md) explains the broader assessment and agent-debate design.
+Stage 1 focuses on claim checking with public web sources and saved evidence. From Stage 1 on, technical users such as AI agents acting for a responsible person would get the same functions as people through the same API as the browser interface; confirmations, permissions and approvals stay with people. Broader decision workflows and controlled external actions come later. The [pipeline](Pipeline.md) explains the broader assessment and agent-debate design.
 
 ## Planning documents
 
-This repository's [project concept](Concept.md), [key requirements](Requirements.md) and [analysis pipeline](Pipeline.md) complement this architecture overview. Agreed contributions need concrete requirements and acceptance criteria supplied alongside their scope.
+[How it would work](Concept.md), the [key requirements](Requirements.md) and the [analysis pipeline](Pipeline.md) complement this architecture overview. We supply detailed requirements and acceptance criteria with each agreed piece of work.

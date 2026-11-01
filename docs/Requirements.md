@@ -1,73 +1,100 @@
 # Key requirements
 
-These are the most important requirements for the planned DSS: what it must and must not do. They are design commitments, not delivered functionality. Early milestones deliver some of them in simplified form, and reports say what was not assessed.
+These are the most important requirements for the planned DSS: what it must and must not do. They are design commitments, not delivered functionality. Which of them Stage 1 covers, and in what form, is set when it is scoped; reports say what was not assessed.
 
-## How the parts fit together
+<a id="how-the-parts-fit-together"></a>
 
-The diagram shows the main objects these requirements refer to in fact-checking. A claim consists of parts; each assessment states every part and cites evidence through links that quote exact passages in captured source versions. Every assessment and evidence link records how it was established, and gaps are named as limitations.
+## Main records and how they relate
+
+Like the FactHarbor Alpha, DSS splits a claim into atomic claims, statements that can each be checked on their own, and gives each one its own assessment. The overall assessment builds on these. Assessments cite evidence items that quote exact passages in captured documents, and evidence with a compatible scope can be grouped into claim assessment boundaries. Every judgment records how it was established, and the report names gaps as limitations.
 
 ```mermaid
 erDiagram
-  ReportEdition }o--|{ Assessment : contains
-  Claim ||--o{ Assessment : "assessed in"
-  Claim ||--|{ Part : "consists of"
-  Assessment }o--|{ Part : "states each"
-  Assessment ||--o{ EvidenceLink : cites
-  Part ||--o{ EvidenceLink : "supported, contradicted or qualified by"
-  EvidenceLink }o--|| Passage : quotes
-  Passage }o--|| SourceVersion : "located in"
-  SourceVersion }o--|| Source : "published by"
-  SourceVersion |o--o{ SourceVersion : "original of"
+  Claim ||--|{ AtomicClaim : "split into"
+  Claim ||--o{ OverallAssessment : "assessed in"
+  OverallAssessment ||--|{ AtomicClaimAssessment : "built on"
+  AtomicClaim ||--o{ AtomicClaimAssessment : "assessed in"
+  AtomicClaim |o--o{ SearchQuery : "searched with"
+  SearchQuery }o--o{ Document : finds
+  AtomicClaimAssessment ||--o{ Citation : cites
+  Citation }o--|| EvidenceItem : "refers to"
+  AtomicClaimAssessment ||--o{ BoundaryFinding : "finds per boundary"
+  BoundaryFinding }o--|| ClaimAssessmentBoundary : for
+  ClaimAssessmentBoundary }o--o{ EvidenceItem : groups
+  EvidenceItem }o--|| Document : "extracted from"
+  Document }o--o{ Document : "derived from"
+  Document }o--|{ Source : "published by"
   Source ||--o{ ReliabilityEvaluation : "rated in"
-  Assessment }o--o{ ReliabilityEvaluation : uses
-  Assessment ||--o{ Limitation : names
-  Assessment ||--|{ EstablishmentRoute : records
-  EvidenceLink ||--|{ EstablishmentRoute : records
-  ReportEdition {
-    time fixed_at
-    label release_per_recipient
-  }
+  EvidenceItem }o--o| ReliabilityEvaluation : "weighed using"
+  ReportEdition }o--o{ OverallAssessment : presents
+  ReportEdition }o--o{ Limitation : names
+  AtomicClaimAssessment |o--o{ Limitation : "limited by"
+  OverallAssessment |o--o{ Limitation : "limited by"
   Claim {
-    text exact_wording
-    text interpretation
+    text wording "exact, as submitted"
+    text context "speaker, date, venue"
   }
-  Part {
-    flag decisive
-    label state
-    text necessary_assignments
+  AtomicClaim["Atomic claim"] {
+    text statement
+    label role "supports, contradicts or context"
+    text expected_evidence
+    label harm_potential "for scrutiny, never weight"
+    text necessary_assignments "subject, matter, time, relation"
   }
-  Assessment {
-    label verdict_or_unverified_reason
+  AtomicClaimAssessment["Atomic claim assessment"] {
+    int truth_score "0-100, with a verdict only"
+    label verdict "seven labels, unverified or not assessed"
     label confidence
-    text what_would_change_it
+    text overturn_conditions
+    label established_by
   }
-  EvidenceLink {
-    label direction
+  OverallAssessment["Overall assessment"] {
+    text reading "other readings named"
+    int truth_score "with a verdict only"
+    label verdict "or not synthesized, with reason"
+    label confidence
+    text decisive_atomic_claims "per direction"
+    label established_by
+  }
+  SearchQuery["Search query"] {
+    text query
+    label purpose "supporting, contradicting, origin or follow-up"
+  }
+  Citation {
+    label direction "supports, contradicts or qualifies"
+    label assignment "for decisive atomic claims"
+    label established_by
+  }
+  BoundaryFinding["Boundary finding"] {
+    label direction "supports, contradicts or mixed"
+    text reasoning
+  }
+  ClaimAssessmentBoundary["Claim assessment boundary"] {
+    text scope "compatible method, period, region"
+  }
+  EvidenceItem["Evidence item"] {
+    text statement_and_quote
     label foundedness
     label origin_status
-    label weight_level
-    label assignment_decisive_only
+    text scope "method, period, region"
+    label weight_level "very strong to very weak"
+    label established_by
   }
-  Passage {
-    text exact_quote
-    text location
-  }
-  SourceVersion {
+  Document["Captured document"] {
     time captured_at
-    hash fingerprint
-    label authenticity_decisive_only
+    label authenticity "for decisive evidence"
   }
   Source {
-    text publisher_institution_or_author
+    text publisher_or_author
   }
-  ReliabilityEvaluation {
-    label rating_or_insufficient_data
-    label confidence
-    text cited_third_party_material
+  ReliabilityEvaluation["Reliability evaluation"] {
+    label rating "seven labels or insufficient data"
+    text cited_material
     date evaluated_on
   }
-  EstablishmentRoute {
-    label captured_code_model_or_person
+  ReportEdition["Report edition"] {
+    time issued_at
+    text supersedes "earlier edition, if corrected"
   }
   Limitation {
     label type
@@ -75,51 +102,59 @@ erDiagram
   }
 ```
 
-*Simplified conceptual model of the planned design, not a database schema.*
+*Simplified conceptual model of the planned design, not a database schema. Read each line as a sentence, for example "a claim is split into one or more atomic claims". At a line end, a bar means one, a crow's foot many and a circle zero.*
 
 ## Results and their meaning
 
-- **Verdict and confidence:** a factual verdict combines a truth score and a readable label with a separate confidence in the assessment. Neither is a calibrated probability.
-- **Separate states:** conflicting evidence, insufficient evidence and no assessment are distinct outcomes. An unverified result states whether the evidence was insufficient or a conflict remained unresolved.
-- **Basis and overturn conditions:** each verdict states how well the evidence supports it and names the evidence or finding that would change it.
-- **Decisive parts:** a true or mostly true verdict requires the parts decisive for it to be supported, and a false or mostly false verdict requires the parts decisive for it to be contradicted; which parts are decisive is itself a model judgment. In fact-checking, if a verdict still contradicts this after one correction attempt, the report marks the contradiction.
+- **Atomic claims first.** A claim is split into atomic claims; a simple claim is one atomic claim, whose verdict is then also the overall verdict. Each atomic claim gets its own verdict, confidence, reasoning and cited evidence. The overall verdict is a separate judgment built on the atomic claims decisive for it; it never averages their verdicts or counts how many are supported. Where no overall verdict is justified, the report says so and the atomic-claim verdicts stand.
+- **Verdict and confidence.** A factual verdict combines a truth score from 0 (false) to 100 (true), set by model judgment, with the readable label that fixed rules assign to it, and a separate confidence explained by the evidence and the completeness of the search. Neither is a calibrated probability, and no formula derives them from weight levels, reliability labels or item counts.
+- **Separate states.** Mixed is a supported middle result: the evidence shows the claim to be about as much true as false. Unverified means that no adequately supported judgment was reached, for a stated reason: insufficient evidence or an unresolved conflict. A claim that could not be assessed, or an assessment that failed or did not run, is a separate state. Finding no evidence never produces False or a midpoint score.
+- **Reading and scope.** The original wording is kept. An ambiguous claim is assessed in its most plausible reading, with its own qualifiers neither strengthened nor weakened; other material readings and atomic claims that were not assessed are named. Opinions and value judgments get no truth verdict and are named as not assessable. A literally accurate but misleading claim keeps its factual verdict, and the misleading framing is explained separately.
+- **Basis and overturn conditions.** Each verdict states how well the evidence supports it and names the evidence or finding that would change it. A true, mostly true, false or mostly false verdict on an atomic claim cites at least one considered evidence item in its direction, or a recorded inference or calculation.
+- **Decisive atomic claims.** A true or mostly true overall verdict requires each atomic claim decisive for it to point the same way: true or mostly true if it supports the claim, false or mostly false if it contradicts it; the reverse holds for false or mostly false overall verdicts. Which atomic claims are decisive is itself a model judgment and is shown in the report. In fact-checking, if a verdict still breaks this rule after a correction attempt, it keeps its label but carries a prominent notice naming the atomic claim that is not established.
 
 ## How each result was established
 
-- **Recorded routes:** each result records every way it was established: captured, checked by trusted code, judged by a model, or reviewed or adopted by a person. Only trusted-code or human checks are called checked, validated or verified, and a verdict is labelled as a model judgment.
-- **No check by agreement:** when a model assesses another model's output, the result is still a model judgment. Agreement among models, roles or repeated runs never counts as a check.
-- **Correct assignment:** an authentic source does not show that a passage concerns the right subject, matter, time and relation. For the parts a verdict rests on, these stay model judgments until a person checks them, and open ones are named.
-- **Recorded basis:** each assessment records the interpretation of the question or claim, the key details considered, the evidence capture dates, and the versions of the assessment schema and scale.
+- **Each result says how it was established:** captured, checked by trusted code (fixed, tested software rules), judged by a model, or reviewed or adopted by a person. Only checks by trusted code or people are called checked, validated or verified, and a verdict is labelled as a model judgment. A person's check is recorded with their role and covers only what they examined.
+- **Agreement is not a check.** When a model assesses another model's output, the result is still a model judgment. Agreement among models, roles or repeated runs never counts as a check.
+- **Right subject and context.** A genuine source can still be about something else. Whether an evidence item concerns the same subject, matter, time and relation as the atomic claim stays a model judgment until a person checks it; for decisive atomic claims, open questions are named.
+- **Recorded basis.** Each assessment records the reading of the claim, the context of the statement where known (speaker, date and venue), the key details considered, the evidence capture dates, and the versions of the assessment schema and scale.
 
 ## Evidence
 
-- **Search results are candidates:** a retrieved document counts as evidence only after it has been assessed.
-- **Evidence assessed before it counts:** the model first assesses whether each cited document substantiates its statement, for example with data, method or checkable sources, and whether it is the original source. Unfounded material is not counted as evidence and is named in the report. For evidence a verdict rests on, the original source is sought and assessed within the run's search allowance; if it is not found or not sought, the report says so.
-- **Weighed, not counted:** the model gives each cited evidence item a reasoned weight level, from very strong to very weak (not considered), based on its documentation, origin, independence and the reliability of its source. No numeric weights, scores or formulas apply. The model rates source reliability from cited third-party material, such as fact-checks, correction records and ownership, never from its recollection; insufficient data is a separate result, not a low rating. These assessments are shown to readers. Where no source-reliability evaluation is available, reliability is shown as not assessed.
+- **Search in both directions.** For each atomic claim, the search also looks for contradicting evidence. Every search query is recorded with its purpose, and the report says whether a search for contradicting evidence ran. A retrieved document is a candidate; it counts as evidence only after it has been assessed.
+- **Evidence assessed before it counts.** The model first assesses whether each cited document substantiates the statement it is cited for, for example with data, method or checkable sources, and whether it is the original source; a record of what someone said shows that it was said, not that it is true. Material that does not substantiate its statement is not counted as evidence and is named in the report; baseless claims such as fabrications are never considered. For evidence a verdict rests on, the original source is sought within the run's search allowance; if it is not found or not sought, the report says so.
+- **Weighed, not counted.** Each evidence item gets a reasoned weight level, from very strong to very weak, based on its documentation, origin, independence and the reliability of its source; very weak items are not considered and are named in the report. Items that share an origin count as one basis, not as independent confirmation. The same rules apply to supporting and contradicting evidence. No numeric evidence weights, evidence or source scores, or formulas apply.
+- **Scope and claim assessment boundaries.** Each evidence item records the scope of its data, such as method, period and region. Evidence with compatible scopes can be grouped into claim assessment boundaries. Where boundaries lead to different conclusions, the assessment shows a finding for each and explains the difference; each atomic claim keeps one verdict.
+- **Source reliability.** Ratings rest on retrieved, cited third-party material, such as fact-checks, correction records and ownership; without such material the result is insufficient data, not a low rating. Where no evaluation is available, reliability is shown as not assessed. These assessments are shown to readers.
 
 ## Consistency of judgments
 
-- **Repeated runs:** if runs are repeated on the same captured evidence, the verdict is never set by picking a favorable run, rerunning until runs agree, or voting or averaging. A single run means stability is not measured. Whether and how run variation is shown is decided after reader testing.
+- **Repeated runs:** if runs are repeated on the same captured evidence, the verdict is never set by picking a favourable run, rerunning until runs agree, or voting or averaging. A single run means stability is not measured. Whether and how run variation is shown is decided after reader testing.
 - **Separate measures:** evidence sufficiency and any observed run variation stay separate and are never merged into one score. Run variation is also kept apart from the verdict and its confidence. A model's stated confidence always comes with its evidence-based reasons, is not a calibrated probability and never establishes correctness on its own.
 
-## Gaps and limits
+<a id="gaps-and-limits"></a>
 
-- **Named limits instead of stops:** in fact-checking, uncertainty, missing or conflicting evidence and parts that could not be assessed are named in the report instead of stopping the analysis; access, disclosure and release checks still apply.
+## Gaps, limits and corrections
+
+- **Named limits instead of stops:** in fact-checking, uncertainty, missing or conflicting evidence and atomic claims that could not be assessed are named in the report instead of stopping the analysis; access, disclosure and release checks still apply.
 - **Missing steps:** a required task or check that cannot run is named as missing, never silently skipped; fact-checking continues with the gap shown, and other analyses are held or limited.
+- **Corrections:** an issued report edition is never changed silently. A correction or reassessment creates a new dated edition linked to the earlier one, stating what changed and why; the earlier edition keeps its content and shows that it was superseded.
 
 ## Decisions (later stage)
 
 - **People set the basis:** goals, constraints and priorities are confirmed by the responsible person.
 - **Open points:** the report names open decisive points as questions for the person deciding; possible consequences of an error are stated only where evidence supports them. Urgency never waives a required check.
-- **No authority from evidence:** a report is evidence, not permission to act. Disclosure, release and external actions are authorized separately.
+- **A basis, not permission:** a report is a basis for decisions, not permission to act. Disclosure, release and external actions are authorized separately.
 
 ## People and software
 
-- **Same functions through an API:** technical users, such as other software and working AI agents acting for a responsible person, get the same functions as people, with their own identity and never more rights. Confirming goals and approving actions stay with people.
+- **Same functions through an API:** technical users, such as other software and AI agents acting for a responsible person, get the same functions as people, with their own identity and never more rights. Confirming goals and approving actions stay with people.
 
 ## Evaluation
 
-- **Before ordinary use:** methods must pass independent evaluation against reference judgments by competent reviewers. Until then, results are labelled as coming from an unqualified method.
+- **Before routine use:** methods must pass independent evaluation against reference judgments by competent reviewers, with pass criteria set before testing. Until then, results are labelled as coming from a method not yet independently evaluated.
+- **Independent reference judgments:** reviewers record their judgments before seeing DSS results, and disagreements are reported, not forced into consensus. Evaluation covers the reading of each claim and its decisive atomic claims as well as verdicts, and compares English and German versions of the same claims.
 - **Method, not the single case:** measured agreement with independent reviewers describes the method, not an individual verdict.
 - **Effort:** evaluation also measures whether DSS makes human checking faster and more complete.
 

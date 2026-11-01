@@ -4,22 +4,23 @@
 
 FactHarborDSS is a planned Decision Support System for factual-claim assessment and comparison of options against evidence and human-confirmed goals.
 
-**Status — 28 October 2026:** requirements and architecture work in progress; the first development milestone has not started. The DSS application is not yet implemented or evaluated.
+**Status — 1 November 2026:** requirements and architecture work in progress; Stage 1 has not started. The DSS application is not yet implemented or evaluated.
 
 ## Documentation source files
 
 - [Start here](docs/index.md)
-- [Association and projects](docs/Background.md)
+- [How it would work](docs/Concept.md)
 - [From FactHarbor to DSS](docs/FactHarbor.md)
 - [Our AI Charter and EGA](docs/Charter-and-EGA.md)
-- [Purpose and approach](docs/Concept.md)
-- [Analysis pipeline and agent debate](docs/Pipeline.md)
-- [Why a fresh implementation](docs/Rationale.md)
+- [Association and projects](docs/Background.md)
+- [Key requirements](docs/Requirements.md)
+- [Analysis pipeline](docs/Pipeline.md)
 - [Planned architecture](docs/Architecture.md)
+- [Why a fresh implementation](docs/Rationale.md)
 - [Partnerships and funded development](docs/Cooperation.md)
 - [Contribution guide](CONTRIBUTING.md) and [contact routes](docs/Links.md)
 
-The MkDocs site organizes these pages into Overview, Product and Cooperation. It preserves the distinction between the existing Alpha, the Charter/EGA concepts and planned DSS capabilities.
+The MkDocs site organizes these pages into Overview, Planned design and Cooperation. It preserves the distinction between the existing Alpha, the Charter/EGA concepts and planned DSS capabilities.
 
 ## Preview locally
 
