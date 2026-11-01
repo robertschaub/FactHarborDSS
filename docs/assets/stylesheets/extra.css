@@ -44,6 +44,19 @@
 .dss-intro .md-button { margin: .25rem .25rem .25rem 0; }
 .md-typeset .grid.cards > ul > li { border-radius: .4rem; padding: 1rem; }
 .md-typeset .admonition { font-size: .76rem; }
+.dss-scope {
+  display: inline-block;
+  margin: 0 0 0 .3em;
+  padding: 0 .55em;
+  border: 1px solid var(--md-accent-fg-color);
+  border-radius: 1em;
+  color: var(--md-accent-fg-color);
+  font-size: .72em;
+  font-weight: 600;
+  line-height: 1.6;
+  white-space: nowrap;
+  vertical-align: .08em;
+}
 @media (max-width: 600px) {
   .md-typeset h1 { font-size: 1.5em; }
   .dss-intro { padding: 1rem; }

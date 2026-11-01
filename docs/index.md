@@ -29,7 +29,7 @@ AI-assisted analysis can sound convincing without showing what is actually estab
 
 <a id="the-approach"></a>
 
-[How it would work](Concept.md) describes the process. DSS follows a few core [principles](Requirements.md): an assessment is not a fact, only a check establishes, agreement is not a check, and a result never grants permission to act.
+[How it would work](Concept.md) describes the process. DSS follows a few core [principles](Requirements.md): it supports decisions and does not make them, an assessment is not a fact, only a check establishes, agreement is not a check, and a result never grants permission to act.
 
 ## Planned stages
 
