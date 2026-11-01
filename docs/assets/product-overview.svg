@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="410" viewBox="0 0 1000 410" role="img" aria-labelledby="title desc">
 <title id="title">The planned FactHarborDSS approach</title>
-<desc id="desc">Define the question and, for decisions, human priorities. Examine permitted evidence, preserving sources and gaps. Assess the evidence and challenge reasoning; extra debate agents are selected when required or justified, not used for every request. Present sources, reasons and uncertainty in an inspectable report. Validation and sharing checks remain mandatory; actions need separate authority. This is planned capability, with additional-agent debate and decision support later.</desc>
+<desc id="desc">Define the question and, for decisions, human priorities. Examine permitted evidence, preserving sources and gaps. Assess the evidence and challenge reasoning; extra debate agents are selected when required or justified, not used for every request. Present sources, reasons and uncertainty in an inspectable report. Model assessment, trusted checks and sharing checks remain mandatory; actions need separate authority. This is planned capability, with additional-agent debate and decision support later.</desc>
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8Z" fill="#80636b"/></marker></defs>
 <style>text{font-family:Arial,sans-serif;fill:#443d38}.heading{font-size:25px;font-weight:700}.step{font-size:22px;font-weight:700}.body{font-size:20px}.note{font-size:17px}.edge{stroke:#80636b;stroke-width:2;marker-end:url(#arrow)}</style>
 <rect width="1000" height="410" rx="16" fill="#fbf7f0"/>
@@ -26,7 +26,7 @@
 <text class="body" x="875" y="178" text-anchor="middle">An inspectable report</text>
 <text class="body" x="875" y="209" text-anchor="middle">Reasons, uncertainty</text>
 <text class="note" x="500" y="285" text-anchor="middle">Selected debate agents can challenge and reconcile findings—not vote on truth.</text>
-<text class="note" x="500" y="316" text-anchor="middle">Validation and sharing checks remain mandatory. Actions need separate authority.</text>
+<text class="note" x="500" y="316" text-anchor="middle">Model assessment, trusted checks and sharing checks remain mandatory. Actions need separate authority.</text>
 <a href="https://robertschaub.github.io/FactHarbor/diagrams/homepage-method.svg"><text class="note" x="500" y="365" text-anchor="middle">Simplified adaptation · FactHarbor contributors</text></a>
 <a href="https://creativecommons.org/licenses/by-sa/4.0/"><text class="note" x="500" y="389" text-anchor="middle">CC BY-SA 4.0</text></a>
 </svg>

@@ -4,9 +4,9 @@ The planned pipeline connects an exact question to permitted evidence, an assess
 
 **This is the broader proposed design, not an implemented workflow.** The first milestone remains web evidence capture/replay and minimal claim assessment. Decision comparison and the additional-agent debate route are later scope, subject to evaluation. More agents are not themselves evidence of better results.
 
-[![Simplified planned pipeline: frame the request, capture or replay evidence, assess a claim or decision, select bounded debate tasks, reconcile objections, validate, finalize and check recipient release; a direct route retains mandatory checks](assets/analysis-pipeline.svg)](assets/analysis-pipeline.svg)
+[![Simplified planned pipeline: frame the request, capture or replay evidence, assess a claim or decision, select bounded debate tasks, reconcile objections, apply model assessment and trusted checks, finalize and check recipient release; a direct route retains mandatory checks](assets/analysis-pipeline.svg)](assets/analysis-pipeline.svg)
 
-*Open the diagram for a larger view. The “Conditional agent debate” panel contains possible debate tasks; it does not prescribe all roles, parallel dispatch or a fixed number of model calls. The Validator role is represented in step 4 alongside trusted code checks; required validation applies on both routes.*
+*Open the diagram for a larger view. The “Conditional agent debate” panel contains possible debate tasks; it does not prescribe all roles, parallel dispatch or a fixed number of model calls. The support assessor is represented in step 4 alongside trusted code checks; both apply on both routes.*
 
 *Simplified adaptation of the FactHarbor/DSS design. Attribution: FactHarbor contributors · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) · [Public visual lineage](https://robertschaub.github.io/FactHarbor/diagrams/homepage-method.svg).*
 
@@ -20,7 +20,7 @@ The controller selects only required or justified tasks, their dependencies and 
 | Challenger / specialist | Examine counterevidence, alternative explanations, citation or scope defects, or a specific expert question. |
 | Self-consistency | Examine instability or contradictions on comparable inputs. Repetition and agreement add no independent evidence. |
 | Reconciler | Accept, reject or retain each material objection as unresolved, with reasons; revise affected findings where justified. |
-| Validator | Apply the required qualified semantic checks, including whether citations support the claim. Trusted code separately checks reference existence, exact quotations, evidence dates, versions, arithmetic and current authority. It applies no source weights or evidence-count formulas. Validation grants no release or action permission. |
+| Support assessor | Judge whether the cited passages support the claim, using a method that must first pass independent evaluation. This remains a model judgment and is labelled as one; it is never presented as verified, validated or checked. Trusted code separately checks reference existence, exact quotations, evidence dates, versions, arithmetic and current authority. No source weights or evidence-count formulas apply. Its assessment grants no release or action permission. |
 
 These are task roles, not necessarily five permanent agents or five different models. Different role names do not establish independence. The controller joins only the dependencies it admitted, rejects stale or incompatible results, and retains an explicit outcome for failed or cancelled tasks.
 
@@ -37,6 +37,7 @@ The controller can admit useful refinement or request human input within the sam
 In the planned design, assessments rely on guided model judgment rather than hand-set weights. Reliability comes from recording, separating and measuring judgments:
 
 - **Recorded basis:** each assessment records the interpretation of the question or claim, the key details considered, the evidence capture dates, and the versions of the assessment schema and scale.
+- **How each result was established:** each result records every way it was established: captured, checked by trusted code, judged by a model, or reviewed or adopted by a person. Only trusted-code or human checks are called checked, validated or verified, and a verdict is labelled as a model judgment.
 - **Separate states:** conflicting evidence, insufficient evidence and no assessment are distinct outcomes.
 - **Repeated runs:** if runs are repeated on the same captured evidence, the verdict is never set by picking a favorable run, rerunning until runs agree, or voting or averaging. A single run means stability is not measured. Whether and how run variation is shown is decided after reader testing.
 - **Separate measures:** evidence sufficiency and any observed run variation stay separate and are never merged into one score. Run variation is also kept apart from the verdict and its confidence. A model's self-reported confidence is never used alone.
